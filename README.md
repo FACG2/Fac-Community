@@ -6,7 +6,7 @@ We noticed that Github is not a social environment, and also Gitter messages is 
 
 **So** we built a community **(A BIG FAMILY)** that contains current and past members of FAC, with contact info and some other details about the skills and projects.
 
-## Our users:
+## Our users: :two_men_holding_hands: :two_women_holding_hands:
 ### Who? 
 Current and past FAC students, and the staff.
 ### Thier needs?
@@ -16,9 +16,9 @@ Make relations, Work, Discuss, Cross culture.
 *  FAC members needs a differant way to connect by a social media for example, with other campus. 
 
 ### User testing findings:
-* Good app, but UI needs more improvment.
+* Good app :heart_eyes: , but UI needs more improvment.
 
+### you can see our MAGIC from [here](https://invis.io/3KDITYLYS) :boom: :fire: :
 
+Done by: Abdallah, Madhoun , Wadia , Ahmed :bowtie: .
 
-
-### you can see our MAGIC from (here)[https://invis.io/3KDITYLYS]
