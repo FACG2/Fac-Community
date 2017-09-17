@@ -1,5 +1,6 @@
 # FAC Community :globe_with_meridians: 
 
+![FAC](https://media.licdn.com/media/p/8/005/0a3/300/0f370ec.png)
 ## Our idea:
 ### The problem: 
 We noticed that Github is not a social environment, and also Gitter messages is not always sutible to use, on the other hand the social networks (like Facebook, twitter) is better for connection and making relationships, but also we can't explore others protoflio for example.
