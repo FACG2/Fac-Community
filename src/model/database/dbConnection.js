@@ -7,7 +7,7 @@ if (!process.env.DATABASE_URL) {
 }
 
 if (process.env.NODE_ENV === 'test') {
-  dataUrl = process.env.TEST_URL;
+  dataUrl = process.env.TEST_DATABASE;
 } else {
   dataUrl = process.env.DATABASE_URL;
 }
