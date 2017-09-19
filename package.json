@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test",
-    "start": "NODE_ENV=test src/index.js",
+    "start": "NODE_ENV=test node src/index.js",
     "watch": "NODE_ENV=test nodemon src/index.js",
     "build:db": "NODE_ENV=test node src/model/database/dbBuild.js"
   },
@@ -28,6 +28,8 @@
     "jsonwebtoken": "^8.0.1",
     "mongoose": "^4.11.11",
     "morgan": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-github2": "^0.1.10",
     "pg": "^7.3.0"
   },
   "devDependencies": {
