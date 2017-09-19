@@ -3,6 +3,7 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const controllers = require('./controller/index');
 const bodyParser = require('body-parser');
+const passport = require('passport');
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -22,13 +23,13 @@ app.use(bodyParser.json());
 app.set('port', process.env.PORT || 4000);
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(controllers);
-
-app.use((err, req, res, next)=>{
+app.use(passport.initialize());
+app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.render('error', {
-    message:err.message,
-    error:{}
-  })
-})
+    message: err.message,
+    error: {}
+  });
+});
 
 module.exports = app;
