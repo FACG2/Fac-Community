@@ -4,7 +4,11 @@
   "description": "![FAC](https://media.licdn.com/media/p/8/005/0a3/300/0f370ec.png) ## Our idea: ### The problem:  We noticed that Github is not a social environment, and also Gitter messages is not always sutible to use, on the other hand the social networks (like Facebook, twitter) is better for connection and making relationships, but also we can't explore others protoflio for example.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=test src/index.js",
+    "watch" : "NODE_ENV=test nodemon src/index.js",
+    "test": "NODE_ENV=test",
+    "build:db": "node src/model/database/db_build.js"
   },
   "repository": {
     "type": "git",
