@@ -1,17 +1,14 @@
-var passport = require('passport');
-var GitHubStrategy = require('passport-github2').Strategy;
 require('env2')('./config.env');
 var callbackRedirect;
-const GITHUB_CLIENT_ID = '715e9326ce748caa28f8';
-const GITHUB_CLIENT_SECRET = 'c5fb0ec112c3cf93ecd90d9c69db8d328b2d23a6';
 
-if (process.env === 'test') {
-  callbackRedirect = 'http://localhost:3000/auth/github/callback';
+if (process.env.NODE_ENV === 'test') {
+  callbackRedirect = 'http://127.0.0.1:3000';
 } else {
-  callbackRedirect = 'https://fac-community.herokuapp.com/auth/github/callback';
+  callbackRedirect = 'https://fac-community.herokuapp.com/';
 }
-exports.get = (req, res, next) => {
-  
 
-  passport.authenticate('github', { failureRedirect: '/login' });
+exports.get = (req, res, next) => {
+  var authUrl = `http://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&
+redirect_uri=${callbackRedirect}&scope=read:org`;
+  res.redirect(authUrl);
 };
