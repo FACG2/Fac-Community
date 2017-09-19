@@ -1,31 +1,25 @@
-const db = require('./../../database/dbConnection');
+const connection = require('./../database/dbConnection');
+const addSkill = (Obj, cb) => {
 
-const addSkill = (skill, skillvalue, user_id, cb) => {
-    const sql = {
-        text: `INSERT INTO skills (skill,skillvalue,user_id) VALUES ('${skill}',${skillvalue},${user_id})`
-    };
-    connection.query(sql, (err, res) => {
+    connection.query(`INSERT INTO skills (skill,skillvalue,user_id) VALUES ($1,$2,$3)`, (err, res) => {
         if (err) {
-
             cb(err);
         } else {
-            cb(null, res.rows);
+            cb(null, res);
         }
-    });
+    }, [Obj.skill, Obj.skillvalue, Obj.user_id]);
 };
 
-const updateSkill = (skill, skillvalue, user_id, cb) => {
-    const sql = {
-        text: `UPDATE skills SET skillvalue=${skillvalue} WHERE skill='${skill}' AND user_id=${user_id}`
-    };
+const updateSkill = (Obj, cb) => {
 
-    connection.query(sql, (err, res) => {
+
+    connection.query(`UPDATE skills SET skillvalue=$1 WHERE skill=$2 AND user_id=$3`, (err, res) => {
         if (err) {
             cb(err);
         } else {
-            cb(null, res.rows);
+            cb(null, res);
         }
-    });
+    }, [Obj.skillvalue, Obj.skill, Obj.user_id]);
 };
 
 module.exports = {
