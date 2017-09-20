@@ -14,7 +14,6 @@ module.exports = {
       if (err) {
         console.log(err);
       } else {
-        console.log(body);
         body = qs.parse(body);
         const accessToken = body.access_token;
         callback(accessToken);
