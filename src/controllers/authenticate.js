@@ -4,6 +4,7 @@ exports.get = (req, res, next) => {
   github.fetchToken(req.query.code, (accessToken) => {
     github.getResource('user', accessToken, (err, user) => {
       if (err) {
+
         next(err);
       } else {
         usersFunctions.checkUser(user.login, (err, check)=>{
@@ -24,7 +25,7 @@ exports.get = (req, res, next) => {
             }
           }
         })
-        // console.log('not error', user);
+     
       }
     });
   });

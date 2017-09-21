@@ -9,6 +9,6 @@ if (process.env.NODE_ENV === 'test') {
 
 exports.get = (req, res, next) => {
   var authUrl = `http://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&
-redirect_uri=${callbackRedirect}&scope=read:org`;
+redirect_uri=${callbackRedirect}&scope=user`;
   res.redirect(authUrl);
 };
