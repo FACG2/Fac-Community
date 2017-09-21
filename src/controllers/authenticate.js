@@ -24,7 +24,6 @@ exports.get = (req, res, next) => {
             }
           }
         })
-        // console.log('not error', user);
       }
     });
   });
