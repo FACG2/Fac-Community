@@ -5,12 +5,12 @@ DROP TABLE IF EXISTS users,posts,comments,skills,accounts CASCADE;
 
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
-  username VARCHAR(1000) NOT NULL,
-  name VARCHAR(1000) NOT NULL,
+  username VARCHAR(1000) NOT NULL UNIQUE,
+  name VARCHAR(1000),
   email VARCHAR(1000),
   bio VARCHAR(2000),
-  campus VARCHAR(10) NOT NULL,
-  cohortnum INT NOT NULL
+  campus VARCHAR(10),
+  cohortnum INT
 );
 
 CREATE TABLE posts(

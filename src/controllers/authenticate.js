@@ -1,14 +1,32 @@
 const github = require('./../services/github');
-
-exports.get = (req, res) => {
+const usersFunctions = require('./../model/queries/users.js')
+exports.get = (req, res, next) => {
   github.fetchToken(req.query.code, (accessToken) => {
     github.getResource('user', accessToken, (err, user) => {
       if (err) {
-        console.log(err);
+
+        next(err);
       } else {
-        console.log(user);
+        usersFunctions.checkUser(user.login, (err, check)=>{
+          if(err){
+            next(err);
+          }else{
+            if(check){
+              res.redirect('/home')
+            }else{
+              usersFunctions.addUser(user, (err, added)=>{
+                console.log(err)
+                if(err){
+                  next(err);
+                }else{
+                  res.redirect('/update')
+                }
+              })
+            }
+          }
+        })
+     
       }
-      res.end();
     });
   });
 };
