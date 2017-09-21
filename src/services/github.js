@@ -12,11 +12,11 @@ module.exports = {
       }
     }, (err, res, body) => {
       if (err) {
-        console.log(err);
+        callback(err);
       } else {
         body = qs.parse(body);
         const accessToken = body.access_token;
-        callback(accessToken);
+        callback(null, accessToken);
       }
     });
   },

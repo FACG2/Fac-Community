@@ -1,5 +1,6 @@
-
-    <p>
-    			<a href="/">Home</a> |
-    			<a href="/login">Log In</a>
-    			</p>
+  {{#if user}}
+  <p> Welcome {{user}} </p>
+  <a href="/logout">Log out</a>
+  {{else}}
+  <a href="/login">Log In</a>
+  {{/if}}
