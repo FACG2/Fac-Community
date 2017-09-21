@@ -4,7 +4,7 @@ var callbackRedirect;
 if (process.env.NODE_ENV === 'test') {
   callbackRedirect = 'http://127.0.0.1:3000';
 } else {
-  callbackRedirect = 'https://fac-community.herokuapp.com/';
+  callbackRedirect = 'https://facommunity.herokuapp.com/';
 }
 
 exports.get = (req, res, next) => {
