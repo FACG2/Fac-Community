@@ -1,16 +1,7 @@
 const {Pool} = require('pg');
-require('env2')('./config.env');
-var dataUrl;
+const {DB_CONFIG} = require('../../../config.js');
 
-if (!process.env.DATABASE_URL) {
-  throw new Error('No DATABASE_URL provided');
-}
-
-if (process.env.NODE_ENV === 'test') {
-  dataUrl = process.env.TEST_DATABASE;
-} else {
-  dataUrl = process.env.DATABASE_URL;
-}
+var dataUrl = DB_CONFIG.database;
 
 const pool = new Pool({connectionString: dataUrl, ssl: true});
 
