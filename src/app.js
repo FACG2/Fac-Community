@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const errMiddleware = require('./middlewares/error.js');
 const authRoutes = require('./middlewares/authenticateRoutes.js');
+console.log(authRoutes);
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
