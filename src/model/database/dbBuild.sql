@@ -43,7 +43,7 @@ CREATE TABLE accounts(
 );
 
 INSERT INTO users (username,name,email,bio,campus,cohortnum) VALUES
-('abdhalees','Abdullah','abd@halees.com', 'halees bio','gaza', 2),
+('abd','Abdullah','abd@halees.com', 'halees bio','gaza', 2),
 ('madhoun','Mahmoud','mahmoud@madhoun.com', 'madhoun bio','gaza', 2),
 ('wadia','Mwadia','mahmoud@wadia.com', 'wadia bio','gaza', 2);
 
@@ -73,4 +73,3 @@ INSERT INTO accounts (user_id,socail_network,link) VALUES
 
 
 COMMIT;
-
