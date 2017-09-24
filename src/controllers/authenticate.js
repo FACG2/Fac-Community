@@ -15,12 +15,10 @@ exports.get = (req, res, next) => {
               res.redirect('/');
             } else {
               github.getResource('user/orgs', accessToken, (err, orgs) => {
-                console.log(orgs);
                 if (err) {
                   next(err);
                 } else {
                   isFacMember(orgs, (isMember) => {
-                    console.log(isMember);
                     if (isMember) {
                       usersFunctions.addUser(user, (err, added) => {
                         if (err) {
@@ -31,7 +29,7 @@ exports.get = (req, res, next) => {
                         }
                       });
                     } else {
-                      res.redirect('/');
+                      res.render('login', {error: "You aren't member of Founders and Coders organization on github", cssPath: '/css/login.css'});
                     }
                   });
                 }

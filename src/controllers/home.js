@@ -5,6 +5,6 @@ exports.get = (req, res, next) => {
   if (username) {
     res.render('home', {user: username});
   } else {
-    res.render('home');
+    res.render('login', {title: 'Home', cssPath: '/css/login.css'});
   }
 };
