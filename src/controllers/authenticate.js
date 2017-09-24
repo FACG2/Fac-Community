@@ -21,6 +21,7 @@ exports.get = (req, res, next) => {
                 } else {
                   isFacMember(orgs, (isMember) => {
                     if (isMember) {
+                      console.log(user)
                       usersFunctions.addUser(user, (err, added) => {
                         if (err) {
                           next(err);

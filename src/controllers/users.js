@@ -2,7 +2,9 @@ const users = require('./../model/queries/users.js');
 
 exports.update = (req, res, next) => {
 // res.end(req.body)
-  users.updateUser(req.body, (err, updated) => {
+  var Obj = Object.assign({}, req.body);
+  Obj.username = req.user
+  users.updateUser(Obj, (err, updated) => {
     if (err) {
       next(err);
     } else {
