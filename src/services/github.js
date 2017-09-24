@@ -1,13 +1,14 @@
 const qs = require('querystring');
 const request = require('request');
+const {DB_CONFIG} = require('../../config.js');
 
 module.exports = {
   fetchToken: (code, callback) => {
     request.post({
       url: 'https://github.com/login/oauth/access_token',
       form: {
-        client_id: process.env.GITHUB_CLIENT_ID,
-        client_secret: process.env.GITHUB_CLIENT_SECRET,
+        client_id: DB_CONFIG.clientID,
+        client_secret: DB_CONFIG.clientSecret,
         code: code
       }
     }, (err, res, body) => {
