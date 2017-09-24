@@ -15,11 +15,12 @@ exports.get = (req, res, next) => {
               res.redirect('/');
             } else {
               github.getResource('user/orgs', accessToken, (err, orgs) => {
-                console.log(orgs)
+                console.log(orgs);
                 if (err) {
                   next(err);
                 } else {
                   isFacMember(orgs, (isMember) => {
+                    console.log(isMember);
                     if (isMember) {
                       usersFunctions.addUser(user, (err, added) => {
                         if (err) {
@@ -29,7 +30,7 @@ exports.get = (req, res, next) => {
                           res.redirect('/update');
                         }
                       });
-                    }else{
+                    } else {
                       res.redirect('/');
                     }
                   });
@@ -37,9 +38,8 @@ exports.get = (req, res, next) => {
               });
             }
           }
-
         });
-       }
+      }
     });
   });
 };
@@ -48,6 +48,7 @@ const isFacMember = (orgs, cb) => {
   orgs.map((org) => {
     if (org.login === 'foundersandcoders') cb(true);
   });
+  cb(false);
 };
 
 const addSignedCookie = (res, name, value) => {
