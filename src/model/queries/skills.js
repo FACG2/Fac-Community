@@ -30,7 +30,37 @@ const updateSkill = (Obj, cb) => {
     });
 };
 
+const getSkill = (skill, cb) => {
+  const sql = {
+    text: `SELECT skill FROM skills WHERE skill = $1`,
+    values: [skill]
+  };
+  connection.query(sql, (err, res) => {
+    if (err) {
+      cb(err);
+    } else {
+      cb(null, res.rows[0]);
+    }
+  });
+};
+
+const checkSkill = (skill, cb) => {
+  getSkill(skill, (err, res) => {
+    if (err) {
+      cb(err);
+    } else {
+      if (res) {
+        cb(null, res.skill === skill);
+      } else {
+        cb(null, false);
+      }
+    }
+  });
+};
+
+
 module.exports = {
     addSkill,
-    updateSkill
+    updateSkill,
+    checkSkill
 };

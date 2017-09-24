@@ -1,5 +1,6 @@
 const test = require('tape');
 const usersFunctions = require('../model/queries/users.js');
+var crypto = require("crypto");
 const {
     getLast,
     selectById
@@ -19,8 +20,9 @@ test("Check the user's existing", (t) => {
 });
 
 test('Check the user inseration', (t) => {
+  var username = crypto.randomBytes(10).toString('hex');
   var obj = {
-    login: 'aqajour',
+    login: username,
     name: 'Ahmeqd Ajour',
     email: 'ahmqed.ajourr@gmail.com'
   };

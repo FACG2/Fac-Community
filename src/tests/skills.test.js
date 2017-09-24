@@ -5,6 +5,20 @@ const {
     selectById
 } = require('./helpers/db.js')
 
+test("Check the user's existing", (t) => {
+  skillFunctions.checkSkill('JS', (err, res) => {
+    if (err) {
+      console.log(err);
+    } else {
+      var actual = res;
+      var expected = true;
+      t.equal(actual, expected, 'should return true');
+    }
+    t.end();
+  });
+});
+
+
 test('Check the skill inseration', (t) => {
     var obj = {
         skill: 'Database',
