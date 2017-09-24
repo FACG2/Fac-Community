@@ -1,6 +1,6 @@
 <div class="container">
-<h1>update</h1>
-<!-- <form id="update-form" action="/updateuser" method="post">
+  <h1>update</h1>
+  <!-- <form id="update-form" action="/updateuser" method="post">
   <input id="updateName" type="text" name="name" value="" placeholder="name" required>
   <input id="updateEmail" type="text" name="email" value="" placeholder="email" required>
   <input id="updateBio" type="text" name="bio" value="" placeholder="bio" required>
@@ -9,88 +9,87 @@
   <button id="submit" type="submit" name="">Update</button>
 </form>
 -->
-<form id="update-form" action="/updateuser" method="post">
-  <div class="form-group row">
-    <label for="name-input" class="col-2 col-form-label">Full name</label>
-    <div class="col-10">
-      <input class="form-control" type="text" name="name" value="" id="text-input" required>
+  <form id="update-form" action="/updateuser" method="post">
+    <div class="form-group row">
+      <label for="name-input" class="col-2 col-form-label">Full name</label>
+      <div class="col-10">
+        <input class="form-control" type="text" name="name" value="" id="text-input" required>
+      </div>
     </div>
-  </div>
-  <div class="form-group row">
-    <label for="email-input" class="col-2 col-form-label">Email</label>
-    <div class="col-10">
-      <input class="form-control" type="email" name="email" value="" id="email-input" required>
+    <div class="form-group row">
+      <label for="email-input" class="col-2 col-form-label">Email</label>
+      <div class="col-10">
+        <input class="form-control" type="email" name="email" value="" id="email-input" required>
+      </div>
     </div>
-  </div>
-  <div class="form-group row">
-    <label for="bio-input" class="col-2 col-form-label">Bio</label>
-    <div class="col-10">
-      <input class="form-control" type="text" name="bio" value="" id="bio-input">
+    <div class="form-group row">
+      <label for="bio-input" class="col-2 col-form-label">Bio</label>
+      <div class="col-10">
+        <input class="form-control" type="text" name="bio" value="" id="bio-input">
+      </div>
     </div>
-  </div>
-  <div class="form-group row">
-    <label class="col-2 col-form-label" for="inlineFormCustomSelect">Campus</label>
-    <div class="col-10">
-      <select class="custom-select col-10" id="inlineFormCustomSelect">
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="inlineFormCustomSelect">Campus</label>
+      <div class="col-10">
+        <select class="custom-select col-10" id="inlineFormCustomSelect">
         <option selected>Choose...</option>
         <option value="London">London</option>
         <option value="Nazareth">Nazareth</option>
         <option value="Gaza">Gaza</option>
       </select>
+      </div>
     </div>
-  </div>
-  <div class="form-group row">
-    <label for="cohortNumber-input" class="col-2 col-form-label">cohort Number</label>
-    <div class="col-10">
-      <input class="form-control" type="number" value="" id="cohortNumber-input">
+    <div class="form-group row">
+      <label for="cohortNumber-input" class="col-2 col-form-label">cohort Number</label>
+      <div class="col-10">
+        <input class="form-control" type="number" value="" id="cohortNumber-input">
+      </div>
     </div>
-  </div>
-  <div class="skills row ">
-    <label for="skillsForms" class="col-2 col-form-label">Skills</label>
-    <div class="col-10" id="skillsForms">
-      <div id="dynamicInput">
-        <div class="skill">
-          <div class="skills col-6">
-            <label class=" col-form-label">skill 1</label>
-            <br><input type="text" class="form-control" name="skill">
-          </div>
-          <div class="values col-6">
-            <label class=" col-form-label">Skills value</label>
-            <div  class="SkillsValue">
-              <input class="form-control" name="skillvalue" type="number" value="">
+    <div class="skills row ">
+      <label for="skillsForms" class="col-2 col-form-label">Skills</label>
+      <div class="col-10" id="skillsForms">
+        <div id="dynamicInput">
+          <div class="skill">
+            <div class="skills col-6">
+              <label class=" col-form-label">skill 1</label>
+              <br><input type="text" class="form-control" name="skill">
+            </div>
+            <div class="values col-6">
+              <label class=" col-form-label">Skills value</label>
+              <div class="SkillsValue">
+                <input class="form-control" name="skillvalue" type="number" value="">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="text-center addskill">
-        <input type="button" class="btn btn-secondary" value="+" onClick="addInput('dynamicInput');">
-      </div>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label class="col-2 col-form-label">Socail accounts</label>
-    <div class="socails col-10">
-      <div class="socail">
-        <label class=" col-form-label">Facebook</label>
-        <input class="form-control" name="link" type="text" value="">
-      </div>
-      <div class="socail">
-        <label class="col-5 col-form-label">Twitter</label>
-        <input class="form-control" name="link" type="text" value="">
-      </div>
-      <div class="socail">
-        <label class="col-5 col-form-label">Instagram</label>
-        <input class="form-control" name="link" type="text" value="">
-      </div>
-      <div class="socail">
-        <label class="col-5 col-form-label">Linkedin</label>
-        <input class="form-control" name="link" type="text" value="">
+        <div class="text-center addskill">
+          <input type="button" class="btn btn-secondary" value="+" onClick="addInput('dynamicInput');">
+        </div>
       </div>
     </div>
-  </div>
-  <div class="form-group row">
-    <input class="btn btn-primary save-btn" type="submit" value="Save">
-  </div>
-</form>
-<script type="text/javascript" src="/js/index.js"></script>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Socail accounts</label>
+      <div class="socails col-10">
+        <div class="socail">
+          <label class=" col-form-label">Facebook</label>
+          <input class="form-control" name="link" type="text" value="">
+        </div>
+        <div class="socail">
+          <label class="col-5 col-form-label">Twitter</label>
+          <input class="form-control" name="link" type="text" value="">
+        </div>
+        <div class="socail">
+          <label class="col-5 col-form-label">Instagram</label>
+          <input class="form-control" name="link" type="text" value="">
+        </div>
+        <div class="socail">
+          <label class="col-5 col-form-label">Linkedin</label>
+          <input class="form-control" name="link" type="text" value="">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <input class="btn btn-primary save-btn" type="submit" value="Save">
+    </div>
+  </form>
 </div>
