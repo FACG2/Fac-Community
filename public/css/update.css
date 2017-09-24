@@ -1,0 +1,32 @@
+body {
+  color: #3E3E3E;
+  background-color: #E2E2E2
+}
+
+.save-btn {
+  padding: 10px 25px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+  color: #565656;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/*.skills, .values{
+  padding-left: 0 !important;
+  margin-right: 0 !important;
+}*/
+
+.addskill {
+  margin: 15px 0
+}

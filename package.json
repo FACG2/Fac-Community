@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
 
-    
+    "testQ": "NODE_ENV=test node src/tests/users.test.js | tap-spec  && NODE_ENV=test node src/tests/skills.test.js | tap-spec && NODE_ENV=test node src/tests/accounts.test.js | tap-spec && NODE_ENV=test node src/tests/comments.test.js | tap-spec && NODE_ENV=test node src/tests/posts.test.js| tap-spec",
     "start": "NODE_ENV=development node src/index.js",
     "watch": "NODE_ENV=test nodemon src/index.js",
     "build:db": "NODE_ENV=test node src/model/database/dbBuild.js"

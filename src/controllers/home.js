@@ -1,4 +1,3 @@
-// const cookieParser = require('cookie-parser');
 
 exports.get = (req, res, next) => {
   const username = req.signedCookies.username;
