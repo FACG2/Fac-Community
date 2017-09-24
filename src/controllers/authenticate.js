@@ -15,6 +15,7 @@ exports.get = (req, res, next) => {
               res.redirect('/');
             } else {
               github.getResource('user/orgs', accessToken, (err, orgs) => {
+                console.log(orgs)
                 if (err) {
                   next(err);
                 } else {
@@ -28,14 +29,17 @@ exports.get = (req, res, next) => {
                           res.redirect('/update');
                         }
                       });
+                    }else{
+                      res.redirect('/');
                     }
                   });
                 }
               });
             }
           }
+
         });
-      }
+       }
     });
   });
 };
