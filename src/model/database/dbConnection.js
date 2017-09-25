@@ -3,6 +3,6 @@ const {DB_CONFIG} = require('../../../config.js');
 
 var dataUrl = DB_CONFIG.database;
 
-const pool = new Pool({connectionString: dataUrl, ssl: true});
+const pool = new Pool({connectionString: dataUrl});
 
 module.exports = pool;

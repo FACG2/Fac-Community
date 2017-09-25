@@ -12,7 +12,6 @@ const search = require('./search.js');
 const basicInfo = require('./getBasicInfo.js');
 const skills = require('./skills.js');
 
-
 router.get('/', home.get);
 
 router.post('/updateuser', users.update);
@@ -25,17 +24,30 @@ router.get('/login', (req, res, next) => {
   res.render('login', {title: 'Home', cssPath: '/css/login.css'});
 });
 router.get('/update', (req, res, next) => {
-  res.render('update', {title: 'Update', cssPath: '/css/update.css'});
+  res.render('update',
+    {title: 'Update',
+      cssPath: '/css/update.css',
+      cssPath2: '/css/home.css'
+    });
 });
 
+router.get('/profile', (req, res, next) => {
+  res.render('profile', {
+    title: 'profile',
+    cssPath: '/css/profile.css',
+    cssPath2: '/coz-css/bootstrap.mini.css',
+    cssPath3: '/coz-css/bootstrap.max.css',
+    cssPath4: '/coz-css/bootstrap.public.css',
+    cssPath5: '/css/home.css'
+
+  });
+});
 
 router.get('/results', (req, res, next) => {
   res.render('results', {title: 'Results', cssPath: '/css/results.css'});
 });
 
-
 router.post('/search', search.getAll);
-
 
 router.post('/updateuser', users.update);
 

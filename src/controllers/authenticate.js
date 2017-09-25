@@ -26,7 +26,7 @@ exports.get = (req, res, next) => {
                           next(err);
                         } else {
                           addSignedCookie(res, 'user', user.login);
-                          addUnSignedCookie(res.cookie, 'username', user.login);
+                          addUnSignedCookie(res, 'username', user.login);
                           res.redirect('/update');
                         }
                       });
