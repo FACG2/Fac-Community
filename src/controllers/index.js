@@ -19,6 +19,9 @@ router.get('/update', (req, res, next) => {
   res.render('update', {title: 'Update', cssPath: '/css/update.css'});
 });
 
+router.get('/results', (req, res, next) => {
+  res.render('results', {title: 'Results', cssPath: '/css/results.css'});
+});
 router.post('/updateuser', users.update);
 
 router.get('/auth/github', loginAuth.get);
