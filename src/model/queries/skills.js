@@ -3,7 +3,9 @@ const connection = require('./../database/dbConnection');
 const getSkills = (Obj, cb) => {
   const sql = {
     text: `SELECT * FROM skills where user_id =$1`,
-    values: [Obj.user_id]
+//     values: [Obj.user_id]
+    values: [Obj]
+
   };
   connection.query(sql, (err, res) => {
     if (err) {

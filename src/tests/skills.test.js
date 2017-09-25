@@ -19,6 +19,7 @@ test("Check the user's existing", (t) => {
 });
 
 test('get user skills', (t) => {
+
   var obj = {
     user_id: 1
   };
