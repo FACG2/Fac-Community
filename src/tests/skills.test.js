@@ -19,7 +19,8 @@ test("Check the user's existing", (t) => {
 });
 
 test('get user skills', (t) => {
-  obj = {
+
+  var obj = {
     user_id: 1
   };
   skillFunctions.getSkills(obj, (err, res) => {
