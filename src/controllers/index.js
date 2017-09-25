@@ -19,6 +19,16 @@ router.get('/update', (req, res, next) => {
   res.render('update', {title: 'Update', cssPath: '/css/update.css'});
 });
 
+router.get('/profile', (req, res, next) => {
+  res.render('profile', {
+    title: 'profile',
+    cssPath: '/css/profile.css',
+    cssPath2: '/coz-css/bootstrap.mini.css',
+    cssPath3: '/coz-css/bootstrap.max.css',
+    cssPath4: '/coz-css/bootstrap.public.css'
+  });
+});
+
 router.post('/updateuser', users.update);
 
 router.get('/auth/github', loginAuth.get);
