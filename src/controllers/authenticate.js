@@ -19,21 +19,19 @@ exports.get = (req, res, next) => {
                 if (err) {
                   next(err);
                 } else {
-                  isFacMember(orgs, (isMember) => {
-                    if (isMember) {
-                      usersFunctions.addUser(user, (err, added) => {
-                        if (err) {
-                          next(err);
-                        } else {
-                          addSignedCookie(res, 'user', user.login);
-                          addUnSignedCookie(res, 'username', user.login);
-                          res.redirect('/update');
-                        }
-                      });
-                    } else {
-                      res.render('login', {error: "You aren't member of Founders and Coders organization on github", cssPath: '/css/login.css'});
-                    }
-                  });
+                  if (isFacMember(orgs)) {
+                    usersFunctions.addUser(user, (err, added) => {
+                      if (err) {
+                        next(err);
+                      } else {
+                        addSignedCookie(res, 'user', user.login);
+                        addUnSignedCookie(res, 'username', user.login);
+                        res.redirect('/update');
+                      }
+                    });
+                  } else {
+                    res.render('login', {error: "You aren't member of Founders and Coders organization on github", cssPath: '/css/login.css'});
+                  }
                 }
               });
             }
@@ -44,11 +42,11 @@ exports.get = (req, res, next) => {
   });
 };
 
-const isFacMember = (orgs, cb) => {
-  orgs.map((org) => {
-    if (org.login === 'foundersandcoders') cb(true);
-  });
-  cb(false);
+const isFacMember = (orgs) => {
+  for (var i = 0; i < orgs.length; i++) {
+    if (orgs[i].login === 'foundersandcoders') return true;
+  }
+  return false;
 };
 
 const addSignedCookie = (res, name, value) => {
