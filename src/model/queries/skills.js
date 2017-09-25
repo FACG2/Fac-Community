@@ -1,10 +1,10 @@
 const connection = require('./../database/dbConnection');
 
 const getSkills = (Obj, cb) => {
-    const sql = {
-     text: `SELECT * FROM skills where user_id =$1`,
-     values: [Obj.user_id]
-      };
+  const sql = {
+    text: `SELECT * FROM skills where user_id =$1`,
+    values: [Obj.user_id]
+  };
   connection.query(sql, (err, res) => {
     if (err) {
       cb(err);
@@ -15,34 +15,33 @@ const getSkills = (Obj, cb) => {
 };
 
 const addSkill = (Obj, cb) => {
-    const sql = {
-     text: `INSERT INTO skills (skill,skillvalue,user_id) VALUES ($1,$2,$3)`,
-     values: [Obj.skill, Obj.skillvalue, Obj.user_id]
-      };
+  const sql = {
+    text: `INSERT INTO skills (skill,skillvalue,user_id) VALUES ($1,$2,$3)`,
+    values: [Obj.skill, Obj.skillvalue, Obj.user_id]
+  };
 
-    connection.query(sql, (err, res) => {
-        if (err) {
-            cb(err);
-        } else {
-            cb(null, res);
-        }
-    });
+  connection.query(sql, (err, res) => {
+    if (err) {
+      cb(err);
+    } else {
+      cb(null, res);
+    }
+  });
 };
 
 const updateSkill = (Obj, cb) => {
-    const sql = {
-     text: `UPDATE skills SET skillvalue=$1 WHERE skill=$2 AND user_id=$3`,
-     values: [Obj.skillvalue, Obj.skill, Obj.user_id]
-      };
+  const sql = {
+    text: `UPDATE skills SET skillvalue=$1 WHERE skill=$2 AND user_id=$3`,
+    values: [Obj.skillvalue, Obj.skill, Obj.user_id]
+  };
 
-
-    connection.query(sql, (err, res) => {
-        if (err) {
-            cb(err);
-        } else {
-            cb(null, res);
-        }
-    });
+  connection.query(sql, (err, res) => {
+    if (err) {
+      cb(err);
+    } else {
+      cb(null, res);
+    }
+  });
 };
 
 const getSkill = (skill, cb) => {
@@ -73,10 +72,9 @@ const checkSkill = (skill, cb) => {
   });
 };
 
-
 module.exports = {
-    addSkill,
-    updateSkill,
-    checkSkill,
-    getSkills
+  addSkill,
+  updateSkill,
+  checkSkill,
+  getSkills
 };

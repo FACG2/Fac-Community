@@ -6,6 +6,7 @@ const authenticate = require('./authenticate');
 const users = require('./users.js');
 const home = require('./home.js');
 const logout = require('./logout.js');
+const search = require('./search.js');
 
 router.get('/', home.get);
 
@@ -18,6 +19,8 @@ router.get('/logout', logout.get);
 router.get('/update', (req, res, next) => {
   res.render('update', {title: 'Update', cssPath: '/css/update.css'});
 });
+
+router.get('/search', search.getAll);
 
 router.post('/updateuser', users.update);
 
