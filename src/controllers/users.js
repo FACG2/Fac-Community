@@ -1,5 +1,6 @@
 const users = require('./../model/queries/users.js');
 const skills = require('./../model/queries/skills.js');
+const accounts = require('../model/queries/accounts.js');
 
 exports.update = (req, res, next) => {
   console.log(req.body);
@@ -36,9 +37,22 @@ exports.update = (req, res, next) => {
               }
             });
           }
-          res.redirect('update');
+          req.body.link.forEach((link, i) => {
+            if (link !== '') {
+              var account = {
+                socail_network: networks[i],
+                link: link,
+                user_id: userID.id
+              };
+              accounts.addAccount(account, (accounts) => {
+                res.redirect('/update');
+              });
+            }
+          });
         }
       });
     }
   });
 };
+
+var networks = ['Facebook', 'Twitter', 'Instagram', 'Linkedin'];
