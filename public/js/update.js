@@ -2,7 +2,6 @@ var username = document.cookie.split('username=')[1];
 var fullname = document.getElementById('name-input');
 var email = document.getElementById('email-input');
 var bio = document.getElementById('bio-input');
-var userForm = document.getElementById('update-form');
 
 get(`/basicinfo?username=${username}`, (response) => { //eslint-disable-line
   fullname.value = response.name;
@@ -21,14 +20,4 @@ function addInput (divName) {
     document.getElementById(divName).appendChild(newdiv);
     counter++;
   }
-}
-
-function submitForms () {
-  var skillData = {skill: 'js',
-    skillvalue: 5,
-    username: username};
-  post('/skills', {data:'your data'}, (res) => { //eslint-disable-line
-    console.log(res);
-  });
-  // userForm.submit();
 }
