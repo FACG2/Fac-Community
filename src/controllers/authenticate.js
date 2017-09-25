@@ -11,7 +11,8 @@ exports.get = (req, res, next) => {
             next(err);
           } else {
             if (check) {
-              addSignedCookie(res, 'username', user.login);
+              addSignedCookie(res, 'user', user.login);
+              addUnSignedCookie(res, 'username', user.login);
               res.redirect('/');
             } else {
               github.getResource('user/orgs', accessToken, (err, orgs) => {
@@ -24,7 +25,8 @@ exports.get = (req, res, next) => {
                         if (err) {
                           next(err);
                         } else {
-                          addSignedCookie(res, 'username', user.login);
+                          addSignedCookie(res, 'user', user.login);
+                          addUnSignedCookie(res.cookie, 'username', user.login);
                           res.redirect('/update');
                         }
                       });
@@ -53,5 +55,12 @@ const addSignedCookie = (res, name, value) => {
   res.cookie(name, value, {
     expires: new Date(Date.now() + 900000000000),
     signed: true
+  });
+};
+
+const addUnSignedCookie = (res, name, value) => {
+  res.cookie(name, value, {
+    expires: new Date(Date.now() + 900000000000),
+    signed: false
   });
 };

@@ -14,6 +14,20 @@ const getUser = (username, cb) => {
   });
 };
 
+const getUserBasicInfo = (username, cb) => {
+  const sql = {
+    text: `SELECT name,email,bio FROM users WHERE username = $1`,
+    values: [username]
+  };
+  connection.query(sql, (err, res) => {
+    if (err) {
+      cb(err);
+    } else {
+      cb(null, res.rows[0]);
+    }
+  });
+};
+
 const getUserId = (username, cb) => {
   const sql = {
     text: `SELECT id FROM users WHERE username = $1`,
@@ -27,7 +41,6 @@ const getUserId = (username, cb) => {
     }
   });
 };
-
 
 const checkUser = (username, cb) => {
   getUser(username, (err, res) => {
@@ -76,5 +89,6 @@ module.exports = {
   checkUser,
   addUser,
   updateUser,
-  getUserId
+  getUserId,
+  getUserBasicInfo
 };

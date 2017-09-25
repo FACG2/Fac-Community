@@ -1,14 +1,44 @@
 const users = require('./../model/queries/users.js');
+const skills = require('./../model/queries/skills.js');
 
 exports.update = (req, res, next) => {
-// res.end(req.body)
-  var Obj = Object.assign({}, req.body);
-  Obj.username = req.user;
-  users.updateUser(Obj, (err, updated) => {
+  console.log(req.body);
+  var obj = Object.assign({}, req.body);
+  obj.username = req.user;
+  users.updateUser(obj, (err, updated) => {
     if (err) {
       next(err);
     } else {
-      res.redirect('/home');
+      users.getUserId(obj.username, (err, userID) => {
+        if (err) {
+          next();
+        } else {
+          if (Array.isArray(req.body.skill)) {
+            req.body.skill.forEach((skill, i) => {
+              var form = {skill: skill,
+                skillvalue: req.body.skillvalue[i],
+                user_id: userID.id};
+              skills.addSkill(form, (err, skills) => {
+                if (err) {
+                  next();
+                } else {
+                }
+              });
+            });
+          } else {
+            var form = {skill: req.body.skill,
+              skillvalue: req.body.skillvalue,
+              user_id: userID.id};
+            skills.addSkill(form, (err, skills) => {
+              if (err) {
+                next();
+              } else {
+              }
+            });
+          }
+          res.redirect('update');
+        }
+      });
     }
   });
 };
