@@ -6,6 +6,9 @@ const authenticate = require('./authenticate');
 const users = require('./users.js');
 const home = require('./home.js');
 const logout = require('./logout.js');
+
+const search = require('./search.js');
+
 const basicInfo = require('./getBasicInfo.js');
 const skills = require('./skills.js');
 
@@ -33,6 +36,8 @@ router.get('/profile', (req, res, next) => {
     cssPath4: '/coz-css/bootstrap.public.css'
   });
 });
+
+router.post('/search', search.getAll);
 
 router.post('/updateuser', users.update);
 
