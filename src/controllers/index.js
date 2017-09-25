@@ -20,7 +20,7 @@ router.get('/update', (req, res, next) => {
   res.render('update', {title: 'Update', cssPath: '/css/update.css'});
 });
 
-router.get('/search', search.getAll);
+router.post('/search', search.getAll);
 
 router.post('/updateuser', users.update);
 
