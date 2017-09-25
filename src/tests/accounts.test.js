@@ -6,6 +6,22 @@ const {
 } = require('./helpers/db.js')
 
 
+test('get user accounts', (t) => {
+    obj ={
+        user_id:1
+    }
+    accountFunctions.getUserAccounts(obj, (err, res) => {
+    if (err) {
+      t.notOk(err);
+    } else {
+      var actual = res[0];
+      var expected = { id: 1, user_id: 1, socail_network: 'facebook', link: 'www.facebook.com/1' };
+      t.deepEqual(actual, expected, 'should return the same accounts');
+      t.end();
+    }
+  });
+});
+
 test('Delete exists account', (t) => {
   // first we create a card
   var obj = {

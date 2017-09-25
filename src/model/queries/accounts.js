@@ -49,8 +49,23 @@ const deleteAccount = (Obj, cb) => {
     });
 };
 
+const getUserAccounts = (Obj, cb) => {
+    const sql = {
+     text: `SELECT * FROM accounts where user_id =$1`,
+     values: [Obj.user_id]
+      };
+  connection.query(sql, (err, res) => {
+    if (err) {
+      cb(err);
+    } else {
+      cb(null, res.rows);
+    }
+  });
+};
+
 module.exports = {
   addAccount,
   updateAccount,
-  deleteAccount
+  deleteAccount,
+  getUserAccounts
 }

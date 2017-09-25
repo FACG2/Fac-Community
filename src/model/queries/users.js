@@ -14,6 +14,21 @@ const getUser = (username, cb) => {
   });
 };
 
+const getUserId = (username, cb) => {
+  const sql = {
+    text: `SELECT id FROM users WHERE username = $1`,
+    values: [username]
+  };
+  connection.query(sql, (err, res) => {
+    if (err) {
+      cb(err);
+    } else {
+      cb(null, res.rows[0]);
+    }
+  });
+};
+
+
 const checkUser = (username, cb) => {
   getUser(username, (err, res) => {
     if (err) {
@@ -60,5 +75,6 @@ const updateUser = (Obj, cb) => {
 module.exports = {
   checkUser,
   addUser,
-  updateUser
+  updateUser,
+  getUserId
 };
