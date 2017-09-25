@@ -1,0 +1,36 @@
+body{
+  background: url(https://foundersandcoders.com/assets/fac-teamwork.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  margin-top: 300px;
+  width: 500px;
+  color: #fff;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loggg{
+  width: 195px !important;
+  background-color: #444 !important;
+}

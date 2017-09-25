@@ -1,1 +1,12 @@
-<a href="/auth/github">Login with GitHub</a>
+<div class="container">
+  <h1>Okay, it’s not actually hard to explain.</h1>
+  <p>
+    We lied. But now you understand this thing. So come on in.
+  </p>
+  <a  class="btn btn-block btn-lg btn-social btn-github loggg" href="/auth/github">
+    <span class="fa fa-github"></span>
+    Login with GitHub</a>
+    {{#if error}}
+    <p> {{error}} </p>
+    {{/if}}
+</div>

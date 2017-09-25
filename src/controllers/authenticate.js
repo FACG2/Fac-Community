@@ -15,13 +15,11 @@ exports.get = (req, res, next) => {
               res.redirect('/');
             } else {
               github.getResource('user/orgs', accessToken, (err, orgs) => {
-                console.log(orgs)
                 if (err) {
                   next(err);
                 } else {
                   isFacMember(orgs, (isMember) => {
                     if (isMember) {
-                      console.log(user)
                       usersFunctions.addUser(user, (err, added) => {
                         if (err) {
                           next(err);
@@ -30,17 +28,16 @@ exports.get = (req, res, next) => {
                           res.redirect('/update');
                         }
                       });
-                    }else{
-                      res.redirect('/');
+                    } else {
+                      res.render('login', {error: "You aren't member of Founders and Coders organization on github", cssPath: '/css/login.css'});
                     }
                   });
                 }
               });
             }
           }
-
         });
-       }
+      }
     });
   });
 };
@@ -49,6 +46,7 @@ const isFacMember = (orgs, cb) => {
   orgs.map((org) => {
     if (org.login === 'foundersandcoders') cb(true);
   });
+  cb(false);
 };
 
 const addSignedCookie = (res, name, value) => {

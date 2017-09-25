@@ -10,13 +10,13 @@ const logout = require('./logout.js');
 router.get('/', home.get);
 
 router.get('/login', (req, res, next) => {
-  res.render('login');
+  res.render('login', {title: 'Home', cssPath: '/css/login.css'});
 });
 
 router.get('/logout', logout.get);
 
 router.get('/update', (req, res, next) => {
-  res.render('update');
+  res.render('update', {title: 'Update', cssPath: '/css/update.css'});
 });
 
 router.post('/updateuser', users.update);
