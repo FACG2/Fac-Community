@@ -45,11 +45,11 @@ exports.update = (req, res, next) => {
                 user_id: userID.id
               };
               accounts.addAccount(account, (accounts) => {
-                res.redirect('/update');
               });
             }
           });
         }
+        res.redirect('/');
       });
     }
   });
