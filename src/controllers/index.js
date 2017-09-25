@@ -24,7 +24,11 @@ router.get('/login', (req, res, next) => {
   res.render('login', {title: 'Home', cssPath: '/css/login.css'});
 });
 router.get('/update', (req, res, next) => {
-  res.render('update', {title: 'Update', cssPath: '/css/update.css'});
+  res.render('update',
+    {title: 'Update',
+      cssPath: '/css/update.css',
+      cssPath2: '/css/home.css'
+    });
 });
 
 router.get('/profile', (req, res, next) => {
