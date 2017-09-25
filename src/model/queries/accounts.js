@@ -5,7 +5,7 @@ const connection = require('./../database/dbConnection');
 const addAccount = (Obj, cb) => {
     const sql = {
      text: `INSERT INTO accounts (socail_network,link,user_id) VALUES ($1,$2,$3)`,
-     values: [Obj.socail_network, Obj.link, Obj.user_id]
+     values:  [Obj.socail_network, Obj.link, Obj.user_id]
       };
 
     connection.query(sql, (err, res) => {
