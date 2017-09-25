@@ -27,5 +27,5 @@ app.use(errMiddleware);
 app.use(authRoutes);
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(controllers);
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || 3000);
 module.exports = app;
