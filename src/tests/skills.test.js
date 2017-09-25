@@ -8,13 +8,30 @@ const {
 test("Check the user's existing", (t) => {
   skillFunctions.checkSkill('JS', (err, res) => {
     if (err) {
-      console.log(err);
+      t.notOk(err);
     } else {
       var actual = res;
       var expected = true;
       t.equal(actual, expected, 'should return true');
     }
     t.end();
+  });
+});
+
+
+test('get user skills', (t) => {
+    obj ={
+        user_id:1
+    }
+  skillFunctions.getSkills(obj, (err, res) => {
+    if (err) {
+      t.notOk(err);
+    } else {
+      var actual = res[0];
+      var expected = { id: 1, skill: 'JS', skillvalue: 90, user_id: 1 };
+      t.deepEqual(actual, expected, 'should return the same object');
+      t.end();
+    }
   });
 });
 
