@@ -1,6 +1,6 @@
 const userFunctions = require('./../model/queries/users.js');
 
-exports.getUserInfo = (req, res, next) => {
+exports.get = (req, res, next) => {
   var username;
   if (typeof req.params.username === 'undefined') {
     username = req.user;
@@ -15,6 +15,7 @@ exports.getUserInfo = (req, res, next) => {
         if (err) {
           next();
         } else {
+
           res.render('profile.hbs', {users: info,
             profile: info,
             title: 'profile',
@@ -23,6 +24,7 @@ exports.getUserInfo = (req, res, next) => {
             cssPath3: '/coz-css/bootstrap.max.css',
             cssPath4: '/coz-css/bootstrap.public.css',
             cssPath5: '/css/home.css'});
+
         }
       });
     }
