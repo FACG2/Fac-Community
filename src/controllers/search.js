@@ -6,7 +6,7 @@ exports.getAll = (req, res, next) => {
     if (err) {
       next(err);
     } else {
-      res.render('results', {users: result, cssPath: '/css/results.css', title: 'Results'});
+      res.render('results', {users: result, user: req.user, cssPath: '/css/results.css', title: 'Results'});
     }
   });
 };
