@@ -30,7 +30,7 @@ const getUserBasicInfo = (username, cb) => {
 
 const getUserInfo = (userId, cb) => {
   const sql = {
-    text: `SELECT distinct(users.name), users.email, users.bio, users.campus, users.cohortnum ,skills.skill ,skills.skillvalue, accounts.link , accounts.socail_network FROM users LEFT JOIN skills on skills.user_id = users.id LEFT JOIN accounts on accounts.user_id = users.id WHERE users.id= $1 OR accounts.user_id= $1 OR skills.user_id = $1`,
+    text: `SELECT distinct(users.name), users.email, users.bio, users.campus, users.cohortnum ,users.avatar, skills.skill ,skills.skillvalue, accounts.link , accounts.socail_network FROM users LEFT JOIN skills on skills.user_id = users.id LEFT JOIN accounts on accounts.user_id = users.id WHERE users.id= $1 OR accounts.user_id= $1 OR skills.user_id = $1`,
     values: [userId]
   };
   connection.query(sql, (err, res) => {
@@ -72,8 +72,8 @@ const checkUser = (username, cb) => {
 
 const addUser = (Obj, cb) => {
   const sql = {
-    text: `INSERT INTO users (username, name, email) VALUES ($1,$2,$3)`,
-    values: [Obj.login, Obj.name, Obj.email]
+    text: `INSERT INTO users (username, name, email,avatar) VALUES ($1,$2,$3,$4)`,
+    values: [Obj.login, Obj.name, Obj.email, Obj.avatar_url]
   };
 
   connection.query(sql, (err, res) => {
