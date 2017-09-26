@@ -1,6 +1,6 @@
 const userFunctions = require('./../model/queries/users.js');
 
-exports.getUserInfo = (req, res, next) => {
+exports.get = (req, res, next) => {
   var username;
   if (typeof req.params.username === 'undefined') {
     username = req.user;
@@ -15,14 +15,17 @@ exports.getUserInfo = (req, res, next) => {
         if (err) {
           next();
         } else {
-          res.render('profile.hbs', {users: info,
-            profile: info[0],
-            title: 'profile',
-            cssPath: '/css/profile.css',
-            cssPath2: '/coz-css/bootstrap.mini.css',
-            cssPath3: '/coz-css/bootstrap.max.css',
-            cssPath4: '/coz-css/bootstrap.public.css',
-            cssPath5: '/css/home.css'});
+          res.render('profile.hbs',
+            {
+              users: info,
+              profile: takeAnObject(info),
+              title: 'profile',
+              cssPath: '/css/profile.css',
+              cssPath2: '/coz-css/bootstrap.mini.css',
+              cssPath3: '/coz-css/bootstrap.max.css',
+              cssPath4: '/coz-css/bootstrap.public.css',
+              cssPath5: '/css/home.css'
+            });
         }
       });
     }
@@ -34,6 +37,7 @@ function takeAnObject (arr) {
   ourObj.name = arr[0].name;
   ourObj.email = arr[0].email;
   ourObj.bio = arr[0].bio;
+  ourObj.avatar = arr[0].avatar;
   ourObj.campus = arr[0].campus;
   ourObj.cohortnum = arr[0].cohortnum;
   ourObj.email = arr[0].email;

@@ -1,6 +1,6 @@
 const test = require('tape');
 const usersFunctions = require('../model/queries/users.js');
-var crypto = require("crypto");
+var crypto = require('crypto');
 const {
     getLast,
     selectById
@@ -20,13 +20,12 @@ test("Check the user's existing", (t) => {
 });
 
 test('get user ID', (t) => {
-  usersFunctions.getUserId("wadia", (err, res) => {
+  usersFunctions.getUserId('wadia', (err, res) => {
     if (err) {
       t.notOk(err);
     } else {
       var actual = res.id;
-      console.log(res)
-      var expected = 3 ;
+      var expected = 3;
       t.deepEqual(actual, expected, 'should return the same id');
       t.end();
     }
