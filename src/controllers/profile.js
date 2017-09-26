@@ -1,7 +1,12 @@
 const userFunctions = require('./../model/queries/users.js');
 
 exports.getUserInfo = (req, res, next) => {
-  var username = req.params.username;
+  var username;
+  if (typeof req.params.username === 'undefined') {
+    username = req.user;
+  } else {
+    username = req.params.username;
+  }
   userFunctions.getUserId(username, (err, obj) => {
     if (err) {
       next();
