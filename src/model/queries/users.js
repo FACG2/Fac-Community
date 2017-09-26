@@ -1,4 +1,5 @@
 const connection = require('./../database/dbConnection');
+const parseUser = require('../../helpers/parseUser');
 
 const getUser = (username, cb) => {
   const sql = {
@@ -37,7 +38,7 @@ const getUserInfo = (userId, cb) => {
     if (err) {
       cb(err);
     } else {
-      cb(null, res.rows);
+      cb(null, parseUser(res.rows));
     }
   });
 };

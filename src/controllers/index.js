@@ -7,7 +7,7 @@ const home = require('./home.js');
 const logout = require('./logout.js');
 const profile = require('./profile.js');
 const search = require('./search.js');
-
+const editProfile = require('./editProfile.js');
 const basicInfo = require('./getBasicInfo.js');
 const skills = require('./skills.js');
 
@@ -19,17 +19,19 @@ router.get('/auth/github', loginAuth.get);
 router.get('/auth/github/callback', authenticate.get);
 router.post('/skills', skills.post);
 router.get('/logout', logout.get);
+router.get('/editprofile', editProfile.get);
 router.get('/login', (req, res, next) => {
   res.render('login', {title: 'Home', cssPath: '/css/login.css'});
 });
 router.get('/update', (req, res, next) => {
   res.render('update',
-    {
-      title: 'Update',
+    {title: 'Update',
+      user: req.user,
       cssPath: '/css/update.css',
       cssPath2: '/css/home.css'
     });
 });
+
 
 router.get('/profile', profile.get);
 router.get('/profile/:username', profile.get);
