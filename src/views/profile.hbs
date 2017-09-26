@@ -29,9 +29,12 @@
               <div class="social">
                 <ul class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="600">
                   <!-- social icons -->
-                  {{#each profile.accounts}}
-                    <li><a class="ukie-icons hover-animate" href="https://www.{{smoll this.account}}.com/{{this.accountLink}}"><i class="fa fa-{{smoll this.account}}"></i></a></li>
-                  {{/each}}
+                    <li><a class="ukie-icons hover-animate" href="https://www.facebook.com/{{profile.accounts.Facebook}}"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="ukie-icons hover-animate" href="https://www.twitter.com/{{profile.accounts.Twitter}}"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="ukie-icons hover-animate" href="https://www.linkedin.com/{{profile.accounts.Linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a class="ukie-icons hover-animate" href="https://www.Instagram.com/{{profile.accounts.Instagram}}"><i class="fa fa-github"></i></a></li>
+                    <li><a class="ukie-icons hover-animate" href="https://www.github.com/{{user}}"><i class="fa fa-github"></i></a></li>
+
 
                 </ul>
               </div>
