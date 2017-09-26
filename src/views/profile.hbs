@@ -11,146 +11,11 @@
             <div class="col-xs-12 col-sm-5 col-lg-5 text-right">
               <!-- Your foto -->
               <div class="foto">
-                <!-- for man -->
-                <script data-pagespeed-no-defer="">
-                  (function() {
-                    var g = this;
-
-                    function h(b, d) {
-                      var a = b.split("."),
-                        c = g;
-                      a[0] in c || !c.execScript || c.execScript("var " + a[0]);
-                      for (var e; a.length && (e = a.shift());) a.length || void 0 === d ? c[e] ? c = c[e] : c = c[e] = {} : c[e] = d
-                    };
-
-                    function l(b) {
-                      var d = b.length;
-                      if (0 < d) {
-                        for (var a = Array(d), c = 0; c < d; c++) a[c] = b[c];
-                        return a
-                      }
-                      return []
-                    };
-
-                    function m(b) {
-                      var d = window;
-                      if (d.addEventListener) d.addEventListener("load", b, !1);
-                      else if (d.attachEvent) d.attachEvent("onload", b);
-                      else {
-                        var a = d.onload;
-                        d.onload = function() {
-                          b.call(this);
-                          a && a.call(this)
-                        }
-                      }
-                    };
-                    var n;
-
-                    function p(b, d, a, c, e) {
-                      this.h = b;
-                      this.j = d;
-                      this.l = a;
-                      this.f = e;
-                      this.g = {
-                        height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
-                        width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-                      };
-                      this.i = c;
-                      this.b = {};
-                      this.a = [];
-                      this.c = {}
-                    }
-
-                    function q(b, d) {
-                      var a, c, e = d.getAttribute("data-pagespeed-url-hash");
-                      if (a = e && !(e in b.c))
-                        if (0 >= d.offsetWidth && 0 >= d.offsetHeight) a = !1;
-                        else {
-                          c = d.getBoundingClientRect();
-                          var f = document.body;
-                          a = c.top + ("pageYOffset" in window ? window.pageYOffset : (document.documentElement || f.parentNode || f).scrollTop);
-                          c = c.left + ("pageXOffset" in window ? window.pageXOffset : (document.documentElement || f.parentNode || f).scrollLeft);
-                          f = a.toString() + "," + c;
-                          b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0, a = a <= b.g.height && c <= b.g.width)
-                        }
-                      a && (b.a.push(e), b.c[e] = !0)
-                    }
-                    p.prototype.checkImageForCriticality = function(b) {
-                      b.getBoundingClientRect && q(this, b)
-                    };
-                    h("pagespeed.CriticalImages.checkImageForCriticality", function(b) {
-                      n.checkImageForCriticality(b)
-                    });
-                    h("pagespeed.CriticalImages.checkCriticalImages", function() {
-                      r(n)
-                    });
-
-                    function r(b) {
-                      b.b = {};
-                      for (var d = ["IMG", "INPUT"], a = [], c = 0; c < d.length; ++c) a = a.concat(l(document.getElementsByTagName(d[c])));
-                      if (0 != a.length && a[0].getBoundingClientRect) {
-                        for (c = 0; d = a[c]; ++c) q(b, d);
-                        a = "oh=" + b.l;
-                        b.f && (a += "&n=" + b.f);
-                        if (d = 0 != b.a.length)
-                          for (a += "&ci=" + encodeURIComponent(b.a[0]), c = 1; c < b.a.length; ++c) {
-                            var e = "," + encodeURIComponent(b.a[c]);
-                            131072 >= a.length + e.length && (a += e)
-                          }
-                        b.i && (e = "&rd=" + encodeURIComponent(JSON.stringify(t())), 131072 >= a.length + e.length && (a += e), d = !0);
-                        u = a;
-                        if (d) {
-                          c = b.h;
-                          b = b.j;
-                          var f;
-                          if (window.XMLHttpRequest) f = new XMLHttpRequest;
-                          else if (window.ActiveXObject) try {
-                            f = new ActiveXObject("Msxml2.XMLHTTP")
-                          } catch (k) {
-                            try {
-                              f = new ActiveXObject("Microsoft.XMLHTTP")
-                            } catch (v) {}
-                          }
-                          f && (f.open("POST", c + (-1 == c.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(b)), f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), f.send(a))
-                        }
-                      }
-                    }
-
-                    function t() {
-                      var b = {},
-                        d = document.getElementsByTagName("IMG");
-                      if (0 == d.length) return {};
-                      var a = d[0];
-                      if (!("naturalWidth" in a && "naturalHeight" in a)) return {};
-                      for (var c = 0; a = d[c]; ++c) {
-                        var e = a.getAttribute("data-pagespeed-url-hash");
-                        e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight || e in b && a.width >= b[e].o && a.height >= b[e].m) && (b[e] = {
-                          rw: a.width,
-                          rh: a.height,
-                          ow: a.naturalWidth,
-                          oh: a.naturalHeight
-                        })
-                      }
-                      return b
-                    }
-                    var u = "";
-                    h("pagespeed.CriticalImages.getBeaconData", function() {
-                      return u
-                    });
-                    h("pagespeed.CriticalImages.Run", function(b, d, a, c, e, f) {
-                      var k = new p(b, d, a, e, f);
-                      n = k;
-                      c && m(function() {
-                        window.setTimeout(function() {
-                          r(k)
-                        }, 0)
-                      })
-                    });
-                  })();
-                  pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon', 'https://envato.ukiedev.com/ukiecard/style1/indexv.html', '5kkZUOwLw8', true, false, 'ZLMEgv7ZiuE');
-                </script><img src={{profile.avatar}} alt={{profile.name}} data-pagespeed-url-hash="3896046660" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                <!-- for women -->
-                <!-- <img src="./assets/img/photo_female.png" alt="Ukieweb"> -->
+                <img
+                src="{{profile.avatar}}"
+                alt="{{profile.name}}"
+                data-pagespeed-url-hash="3896046660"
+                onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
               </div>
               <!-- end your foto -->
             </div>
@@ -159,36 +24,15 @@
               <h1 class="title">{{profile.name}}</h1>
               <!-- Your Profession -->
               <h3 class="sub-title">{{profile.bio}}</h3>
+
               <!-- social icon -->
               <div class="social">
                 <ul class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="600">
                   <!-- social icons -->
-                  <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-youtube"></i></a></li>
-                  <!--
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-behance"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-pinterest"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-digg"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-deviantart"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-envelope-square"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-delicious"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-instagram"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-dropbox"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-skype"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-vimeo-square"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-flickr"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-github-alt"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-renren"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-vk"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-xing"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-weibo"></i></a></li>
-                                            <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-rss"></i></a></li>
-                                        -->
+                  {{#each profile.accounts}}
+                    <li><a class="ukie-icons hover-animate" href="https://www.{{smoll this.account}}.com/{{this.accountLink}}"><i class="fa fa-{{smoll this.account}}"></i></a></li>
+                  {{/each}}
+
                 </ul>
               </div>
               <!-- end social icon -->
@@ -205,6 +49,38 @@
       <!-- End Menu section -->
     </section>
 
+    <section class="info border-bottom padding-block text-center">
+      <!-- start container -->
+      <div class="container">
+        <!-- start row -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-lg-12">
+            <h3 class="title">Information</h3>
+          </div>
+        </div>
+        <!-- end row -->
+        <!-- start row -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-lg-12">
+            <div class="circle-block ">
+              <span class="icon hover-animate"><i class="fa fa-map-marker"></i></span>
+              <span class="name hover-animate">{{profile.campus}}</span>
+            </div>
+            <div class="circle-block">
+              <span class="icon hover-animate"><i class="fa fa-desktop"></i></span>
+              <span class="name hover-animate">FAC{{first profile.campus}} {{profile.cohortnum}}</span>
+            </div>
+            <div class="circle-block" style="text-align:-webkit-center;">
+              <span class="icon hover-animate"><i class="fa fa-envelope"></i></span>
+              <span class="name hover-animate">{{profile.email}}</span>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+
     <section class="profile" id="navprofile">
       <!-- Start Head section -->
       <header class="head">
@@ -214,13 +90,13 @@
           <div class="row">
             <div class="col-xs-12 col-sm-5 col-lg-5 text-right">
               <img class="logo-page" src="data:image/webp;base64,UklGRsQLAABXRUJQVlA4TLcLAAAvRUARENWKgITg/23ZENH/CTDhJbVt2w5Jzip2xrZnqhXbaXev7WZsW59s2/xkG22NbXumraMLo19QQdXEVsVGJ2+M9Uq0bVtVm4XE3d09eehznHLuve+lwdr//wwcgrRt285GusPaXZtjzzQZz+y/2c927XaCtW3btm3bNpqn/wrctlGW7ZjxD7Sl7V8bN/cXZmZmzmFuIpNTOiy3l9ALoLOehWNby2aGWYP0SXsD1WhkB/71fyuV5MhdbUmu1J9Cch0ehm3bhqH+/7jtZli2bZuOZuzky07KNp7f63+TClcgkPiDLrBADCRJjTIkXiC13sQn1KjGsFU5y3Ge4jEWOKZ2lO9x3UbMWPj5XfcVrtGpAbQKkjEJATG8DGaQQg5FlKIMfdFT2S9NQgYGqrMDaclH4MciYHkUoGYRZtBiYajanAU/+8ErrCOo44jCZDZ3IeM2q4tSlUA3IwhCO3Rhq0sK5k1dNgncw0sVjBcNV19qz2Tia8xzFTCPab4c1LswueoqYio3hypMOJwGvhXZ+GAYgiRxG2nYlnLUJfbeQ7CexV1FjVs9BhD2XBkdbm4vlIQPFViGFodcAuMOHtjuHJj9YGCIY07As+YCy3NMUZimgBd2akwEXWPhXBEyTW8lMPGgEcA2gxbsedWdQ1Pn7WbMQN7ctoR9ieF6gdmE15czp5y/AAj+XwzP63sNJkOOnwLgiUMc/4H9szj5HXedoTtFfgDsS1BD98zf6hi+BWehloL+FPbPIeqH1u9joy5ejWzTDg2c/kLVGwSAY4mhBkLLN2ZJwS8E3P0LAOMetmtg3T6yNBgCRgt0AaQQ/40Nu8hVOOaLfkGtKZUOQF87BjbLJALQQ7l/AcAlD0iMKbwNZgufLoH5lCFMaoQNe0iNSFakOy+peRWV63TbFajCQBxBUOMKjwE8QdYlAHjgFBNDvJoSgdXCEixEpkFIBxE/2KGBDXskDskPij/QgbYr3BXAMUDVBmb62KSLsDYCQ0aVpQmTJywkLKo4JAjrMPwy1a+RB0DHygV049yG9qZA4Q7laqzbR57Cz8iYM5UYa5wRxhtpPAnG/l6E9kRH7u8YQktogqQYEhu9SQAIuz1bA2Ae9y+IaT6t8w9wrdf+iteO8MhLU8y0xoujaufO8fddHmy7xNtxWvXYwurDXMOFG2+O8EyhnzfsYoc6utKoDBdy/CxwHFBW0JwCpJAaIxB6LV45IiLvrq1vpwbHH8ovKH1JNVyGms+m1l+FGy+C/1TfxR7Jzturdis6dqeKhdUyGIJ1+7juGoSozOIvgY00IHwLvMiu4AWmUJqYQyP/TurHecG+gs9c68nkiseEMafoC6quqMEY8krNbbTtePJF4a6kyJosVpYYIR0cZoFyA8EyRtA6XPuKO+P7CO1Ji83Hl0+vaD2ZUvCZ1do6iSFoynZ1742/urwl3jgylBjeJmkRlB/Q6ijCRUC4lvCAAzO0TsfGNp/uzy9+u+Q1pXF0bAhRY66ra3/iic2TocYf2mYWF4FRRIQ9HQI8t0drtx27qY/lT8mGy5DW1pHUAbXwI1N1HxfI+zFt5wE5g/I/iEw9wvcY5NZLjPm2nFI71XY8RWtr5KCMNp0Hb6muG9+zH/fO1jcj2ChP7jPrt+2XVbZT5BAw5pS668h2nWcnP3goOzC8EiC8v+iD27XGXlxfUXMbg4db+JEz5hRUJlLCnFEKPvOjZLDuOnh2c+Mdp1YokVtChKMMvtTAvRd/b6/ML/hMkVpb+5pEdYGgL2ikvqDAM9E4WWNO69j4VjpNkEp7FGPspfaicyb6+GOx5qm8FFn0nnu8MCth98NFHxtrbhMYaT6LSq9OMY9fVN2nVpJqN2fOqNa1T/nTAcnMQhc4CazZFyZb4p/FWqjykrqiVvyWfaIwM2Tv57kfW2tvEhhpPYnMvbqQcfyh5jYZEI2T1Rf07vUvhdMG9fcCj/M0sK+CfcFbk6zFWq7y4nBE5U0foFFDXtU401TudFNWCZJqN2PIz+pN/82/DkRk5wFN8wTygLDCOudi8cumZ4MwPOYvv9baWqDM22XPyaL3jCGvBIrkf+WL3rOjJPmr2VpqW/K5rwURyScwzUkWAAa6J3zVzdFng6CuqCMnPFh1H6+9iaq86fd7i57yZlffxWpvIvqCiqzGG88GodKn7a6ZkF0dFPnytwK/zAaGe8w3Hz58zo/piipsXzdeBO8rLpbU7++ofrK0sY3+O6/+6LZgdcNlyGLlNc40WJ8Jg3Xnl9xjHtKYDQH/13gcCWCBjrnQnyoY8rPVbjIw2m8aL4IX+buTjSXE+JPElqHEFLGEGl907Dq1fLz+KmLKdgWCGiejtbu6Nr45ZyIU+czsdB6MD8xhhfmy8u7w06Up+oKmcXTq+mBjZOyJU44EZY/VTuLnRGVLbZk3ibufU9nfdD41qC/oz4RTS162uKaCFQ7yjI9pzMJjwLBCzqnYs/pD4+TUbrrwI2eylO31z011953l+0GNK/tXrsvqdw8oX9uveX1b9TtauSDDPGnPLn1Jae38c368fee1e8xbIQif17/JL+PIAZu5xkLL6XGLNa7+KnR+bU+E8WSLwFLGSbUTj+XnGfLqo/l5RzbO0xRyhQsx/uPrp5vOQ2p3YsXj7n9tv+xQBqjG8ZLqJALcuR8C1rn5aWtl+9FIZf1OhPGyxKDilAPSzI7yI0+zRJ6wTKEo5Z7aelV9N6riUfNjeGdsXwJDGaAt4HGDKqJAaq9+mB9BJ8Ih40be6rD8t7w0uhypvfDvk634NGXOEQ6ulyCOSX8fa+2scsN967gUeDH6YIBo1l9oqnhmEAPyngUVWBUERIm27Uedizd8Mxpvkv4XIAW6MEsQVtMEKX1DqN8ot62s4QgubdcxEPgoSH/BivBnQA3qsyRykIwG5VjnIk+idV+kuYmq7UYSN1G+W1agtf/k9H7nfhcgDZohmqa8yMjp/s3t/dku4Llrw7YfSjOplNHIpvNSBoGSwJLyv+8vtFSCKUQg5aZAK8JipMm0KmiQE1AkZHGibM9JxaRhFe+g9/ZZ6+YNlhEVIGPQo8Lmf2gb27LHRS/xtII7qhAkSt9UIn3FZsRt9KlBlfJHkIJIbStgEnmIdw/khY6jnE+HgoCMgIwGJbKEBh5F7N9i0ahaPKoUpodxdgbtsTOIvTNIsDpUNKkUD6q5i1J2omghdXsh43IC85FFtH1ljMQT80AAiVDCXbiih2aDwG305tApQ8JxfCmxkHpuomRPiviUCGblwkklJRpXCGYV/GUpmyI2xfOpJeChKGiYSush75JqqgKRTXWxw5EIjUJbDArUIcxGnkuTnAYcgZBQP5GylSs5FHMp5lK08ncRZQup2xsZxxFdonLFAeUEYmhMYvwxhmiIJHRA4ByG8+l4H0ejRFYSmEftVCrElAopXTqFijnUyJEIzEh2+bZZ4rouslozdtqSY6H2BLyWWxSUYplJ00JkzFDxwA4QSmQZkoQArkQiPkCNAvGeXHKudeY5bZKkAq2lTl4GLmGwgPY38QGRIymQPnh5wGHsEHl2T0tN0Jw90AxgdGfchdPU/BSaESRIc2nEh0V3mcoH1mpo6s7QgEaaZUTgNMbv4G56CmjHh8kmqfOe5QRl/+rjeWdeJwgiAffAuQvDR+FkyqbQKqdhmLLfpw1SX5sgzrWXRCg0hTuIA1RjWoD8+nCd7gqFqw7or8Ebwmncr07+30R/NiPeH7asUvjen/CPkSyoirwfn5raILJSaadYV9bSLpFft/h2zcqEgEgmRHRT00VH231ZobRFar9P8B4/PNzu09PrWoiUgOi6pss2jnuyRmq1wlapvb5Ib3F6/uIxz37XiJSCKC740sRFByc82izSXyu3UWarxA6x3b45e31znd0iL4z/3vf/fTL4MS4gwiDckv5928AXpi45uODGKU8OeLfDl00iG0W6j3f49MwwtcE/72SIlPFXrWFVP0+rfVvr73T/xuCvDKb7/Z63KE+fAwA="
-                alt="Ukieweb" data-pagespeed-url-hash="3575018956" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                alt="Profile" data-pagespeed-url-hash="3575018956" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
             </div>
             <div class="col-xs-12 col-sm-7 col-lg-7">
               <!-- Title Page -->
               <h2 class="title">Profile</h2>
               <!-- Description Page -->
-              <h4 class="sub-title">A Brief About Me</h4>
+              <h3 class="sub-title">A Brief About Me</h3>
             </div>
           </div>
           <!-- end row -->
@@ -234,103 +110,28 @@
         <div class="container">
           <!-- start row -->
           <div class="row">
+
             <div class="col-xs-12 col-sm-12 col-lg-6 padding-bottom">
               <h3 class="title title-skills">Professional skills</h3>
-
-              <label class="progress-bar-label">JavaScript</label>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;">
-                  <span>78%</span>
-                </div>
-              </div>
-
-              <label class="progress-bar-label">Photoshop</label>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100" style="width: 96%;">
-                  <span>96%</span>
-                </div>
-              </div>
-
-              <label class="progress-bar-label">Illustrator</label>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-                  <span>85%</span>
-                </div>
-              </div>
-
-              <label class="progress-bar-label">HTML &amp; CSS</label>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                  <span>60%</span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <!-- end row -->
-        </div>
-        <!-- end container -->
-      </section>
-
-
-    </section>
-
-    <section class="contact" id="navcontact">
-      <!-- Start Head section -->
-      <header class="head">
-        <!-- start container -->
-        <div class="container">
-          <!-- start row -->
-          <div class="row">
-            <div class="col-xs-12 col-sm-5 col-lg-5 text-right">
-              <img class="logo-page" src="data:image/webp;base64,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"
-                alt="Ukieweb" data-pagespeed-url-hash="2057552427" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-            </div>
-            <div class="col-xs-12 col-sm-7 col-lg-7">
-              <!-- Title Page -->
-              <h2 class="title">Contact</h2>
-              <!-- Description Page -->
-              <h4 class="sub-title">Get in touch with me</h4>
-            </div>
-          </div>
-          <!-- end row -->
-        </div>
-        <!-- end container -->
-      </header>
-      <!-- End Head section -->
-
-      <!-- Start Content section -->
-      <section class="content padding-block border-bottom">
-        <!-- start container -->
-        <div class="container">
-          <!-- start row -->
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-lg-6">
-              <h3 class="title title-contact">Contact form</h3>
-              <!-- Start Contact Form -->
-              <div class="contact-form">
-                <form action="assets/php/contact.php" id="contact-form" method="post">
-                  <input type="text" id="user-name" name="user-name" value="" placeholder="Name">
-                  <input type="email" id="user-email" name="user-email" value="" placeholder="Email">
-                  <input type="hidden" id="user-status" name="user-status" value="1">
-                  <textarea id="user-message" name="user-message" placeholder="Message"></textarea>
-                  <div class="footer-form">
-                    <input type="submit" id="submit-btn" class="btn btn-color hover-animate" value="Send Message">
-                    <div class="info-message-form">
-                      <p>Please fill out all the fields!</p>
-                      <span class="close-msg"><i class="fa fa-close"></i></span>
-                    </div>
+              {{#each profile.skills}}
+                <label class="progress-bar-label">{{this.skill}}</label>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="{{this.skillvalue}}" aria-valuemin="0" aria-valuemax="100" style="width: {{this.skillvalue}}%;">
+                    <span>{{this.skillvalue}}</span>
                   </div>
-                </form>
-              </div>
-              <!-- End Contact Form -->
+                </div>
+              {{/each}}
             </div>
+
           </div>
           <!-- end row -->
         </div>
         <!-- end container -->
       </section>
-      <!-- End Content section -->
+
+
     </section>
+
+
   </div>
 </div>
