@@ -19,7 +19,7 @@ router.get('/auth/github', loginAuth.get);
 router.get('/auth/github/callback', authenticate.get);
 router.post('/skills', skills.post);
 router.get('/logout', logout.get);
-
+router.post('/editprofileinfo', users.edit);
 router.get('/editprofile', editProfile.get);
 router.get('/login', (req, res, next) => {
   res.render('login', {title: 'Home', cssPath: '/css/login.css'});
