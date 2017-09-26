@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
 const loginAuth = require('./login.js');
 const authenticate = require('./authenticate');
 const users = require('./users.js');
@@ -25,24 +24,16 @@ router.get('/login', (req, res, next) => {
 });
 router.get('/update', (req, res, next) => {
   res.render('update',
-    {title: 'Update',
+    {
+      title: 'Update',
       cssPath: '/css/update.css',
       cssPath2: '/css/home.css'
     });
 });
 
-router.get('/profile', profile.getUserInfo);
-router.get('/profile/:username', profile.getUserInfo);
-
-router.get('/results', (req, res, next) => {
-  res.render('results', {title: 'Results', cssPath: '/css/results.css'});
-});
+router.get('/profile', profile.get);
+router.get('/profile/:username', profile.get);
 
 router.get('/search', search.getAll);
-
-router.post('/updateuser', users.update);
-
-router.get('/auth/github', loginAuth.get);
-router.get('/auth/github/callback', authenticate.get);
 
 module.exports = router;
