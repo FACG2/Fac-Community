@@ -28,6 +28,20 @@ const getUserBasicInfo = (username, cb) => {
   });
 };
 
+const getUserInfo = (userId, cb) => {
+  const sql = {
+    text: `SELECT distinct(users.name), users.email, users.bio, users.campus, users.cohortnum ,skills.skill ,skills.skillvalue, accounts.link , accounts.socail_network FROM users  JOIN skills on skills.user_id = users.id JOIN accounts on accounts.user_id = users.id WHERE users.id= $1 OR accounts.user_id= $1 OR skills.user_id = $1  `,
+    values: [userId]
+  };
+  connection.query(sql, (err, res) => {
+    if (err) {
+      cb(err);
+    } else {
+      cb(null, res.rows);
+    }
+  });
+};
+
 const getUserId = (username, cb) => {
   const sql = {
     text: `SELECT id FROM users WHERE username = $1`,
@@ -90,5 +104,6 @@ module.exports = {
   addUser,
   updateUser,
   getUserId,
-  getUserBasicInfo
+  getUserBasicInfo,
+  getUserInfo
 };
