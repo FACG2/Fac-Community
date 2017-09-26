@@ -10,7 +10,8 @@ exports.getAll = (req, res, next) => {
           users: result,
           cssPath: '/css/results.css',
           cssPath2: '/css/home.css',
-          title: 'Results'
+          title: 'Results',
+          user:req.user,
         });
     }
   });
