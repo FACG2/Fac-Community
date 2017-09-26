@@ -58,8 +58,8 @@ const checkUser = (username, cb) => {
 
 const addUser = (Obj, cb) => {
   const sql = {
-    text: `INSERT INTO users (username, name, email) VALUES ($1,$2,$3)`,
-    values: [Obj.login, Obj.name, Obj.email]
+    text: `INSERT INTO users (username, name, email,avatar) VALUES ($1,$2,$3,$4)`,
+    values: [Obj.login, Obj.name, Obj.email, Obj.avatar_url]
   };
 
   connection.query(sql, (err, res) => {

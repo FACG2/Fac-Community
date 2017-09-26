@@ -4,12 +4,13 @@ DROP TABLE IF EXISTS users,posts,comments,skills,accounts CASCADE;
 
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
-  username VARCHAR(1000) NOT NULL UNIQUE,
-  name VARCHAR(1000),
-  email VARCHAR(1000),
-  bio VARCHAR(2000),
+  username VARCHAR(20) NOT NULL UNIQUE,
+  name VARCHAR(50),
+  email VARCHAR(50),
+  bio VARCHAR(300),
   campus VARCHAR(10),
-  cohortnum INT
+  cohortnum INT,
+  avatar VARCHAR(300)
 );
 
 CREATE TABLE posts(
@@ -41,10 +42,10 @@ CREATE TABLE accounts(
   link VARCHAR(1000)
 );
 
-INSERT INTO users (username,name,email,bio,campus,cohortnum) VALUES
-('abd','Abdullah','abd@halees.com', 'halees bio','gaza', 2),
-('madhoun','Mahmoud','mahmoud@madhoun.com', 'madhoun bio','gaza', 2),
-('wadia','Mwadia','mahmoud@wadia.com', 'wadia bio','gaza', 2);
+INSERT INTO users (username,name,email,bio,campus,cohortnum,avatar) VALUES
+('ajour','Ahmed Ajour','abd@halees.com', 'halees bio','gaza', 2,'https://avatars1.githubusercontent.com/u/28707990?v=4&s=460'),
+('madhoun','Mahmoud Madhoun','mahmoud@madhoun.com', 'madhoun bio','gaza', 2,'https://avatars2.githubusercontent.com/u/3719666?v=4&s=400'),
+('wadia','Mahmoud Wadia','mahmoud@wadia.com', 'wadia bio','gaza', 2,'https://avatars3.githubusercontent.com/u/19922564?v=4&s=460');
 
 
 INSERT INTO posts (user_id,title,context) VALUES

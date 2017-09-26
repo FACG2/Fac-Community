@@ -1,9 +1,9 @@
 const connection = require('./../database/dbConnection');
 
 const searchAll = (searchInput, cb) => {
-  searchInput = searchInput.toLowerCase();
+  searchInput = searchInput.toLowerCase().trim();
   const sql = {
-    text: `SELECT distinct(users.name), users.username FROM users
+    text: `SELECT distinct(users.name), users.username, users.avatar FROM users
            LEFT JOIN skills on skills.user_id = users.id
            where LOWER(users.username) like $1 OR  LOWER(users.name) like $1 OR LOWER(skills.skill) like $1 OR LOWER(users.campus) like $1 `,
     values: [`%${searchInput}%`] };
