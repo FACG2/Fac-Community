@@ -43,10 +43,14 @@ exports.get = (req, res, next) => {
 };
 
 const isFacMember = (orgs) => {
-  for (var i = 0; i < orgs.length; i++) {
-    if (orgs[i].login === 'foundersandcoders') return true;
-  }
-  return false;
+  var isMember = false;
+  // for (var i = 0; i < orgs.length; i++) {
+  //   if (orgs[i].login === 'foundersandcoders') return true;
+  // }
+  orgs.forEach((org) => {
+    if (org.login === 'foundersandcoders') isMember = true;
+  });
+  return isMember;
 };
 
 const addSignedCookie = (res, name, value) => {

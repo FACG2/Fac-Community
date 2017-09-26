@@ -6,8 +6,8 @@
           <h4> Welcome {{user}} </h4>
           <a class="nav-link" id="editProfile" href="/update">Edit profile</a>
         </ul>
-        <form class="form-inline" action="/search" method="post">
-          <input class="form-control mr-sm-2 abs" type="text" name="searchInput" placeholder="Search" required>
+        <form class="form-inline" action="/search" method="GET">
+          <input class="form-control mr-sm-2 abs" type="text" name="search" placeholder="Search" required>
           <button class="btn btn-primary my-2 my-sm-0 abs"  id="subBtn" type="submit">Search</button>
         </form>
         <ul class="nav navbar-nav pull-sm-right">

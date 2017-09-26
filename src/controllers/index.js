@@ -47,7 +47,7 @@ router.get('/results', (req, res, next) => {
   res.render('results', {title: 'Results', cssPath: '/css/results.css'});
 });
 
-router.post('/search', search.getAll);
+router.get('/search', search.getAll);
 
 router.post('/updateuser', users.update);
 
