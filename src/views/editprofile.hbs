@@ -19,16 +19,15 @@
         <input class="form-control" type="text" name="bio" value="{{userInfo.bio}}" id="bio-input">
       </div>
     </div>
-
     <div class="form-group row">
       <label class="col-2 col-form-label" for="inlineFormCustomSelect">Campus</label>
       <div class="col-10">
         <select class="custom-select col-10" id="inlineFormCustomSelect"  required name ="campus">
-        <option selected>{{userInfo.campus}}</option>
-        <option value="London">London</option>
-        <option value="Nazareth">Nazareth</option>
-        <option value="Gaza">Gaza</option>
-      </select>
+          <option selected>{{userInfo.campus}}</option>
+          <option value="London">London</option>
+          <option value="Nazareth">Nazareth</option>
+          <option value="Gaza">Gaza</option>
+        </select>
       </div>
     </div>
     <div class="form-group row">
@@ -37,60 +36,71 @@
         <input class="form-control" id="cohortnum" type="number" value="{{userInfo.cohortnum}}" id="cohortNumber-input" required name="cohortnum">
       </div>
     </div>
-
-  <div class="skills row ">
-    <label for="skillsForms" class="col-2 col-form-label">Skills</label>
-    <div class="col-10" id="skillsForms">
-      
-      {{#each userInfo.skills}}
-
-      <div id="dynamicInput">
-        <div class="skill">
-          <div class="skills col-6">
-            <label class=" col-form-label">skill 1</label>
-            <br><input type="text" class="form-control" name="skill" value="{{this.skill}}">
-          </div>
-          <div class="values col-6">
-            <label class=" col-form-label">Skills value</label>
-            <div class="SkillsValue">
-              <input class="form-control" name="skillvalue" type="number" value="{{this.skillvalue}}">
+    <div class="skills row ">
+      <label for="skillsForms" class="col-2 col-form-label">Skills</label>
+      <div class="col-10" id="skillsForms">
+        
+        {{#each userInfo.skills}}
+        <div id="dynamicInput">
+          <div class="skill">
+            <div class="skills col-5">
+              <label class=" col-form-label">skill 1</label>
+              <br><input type="text" class="form-control" name="skill" value="{{this.skill}}">
             </div>
+            <div class="values col-5">
+              <label class=" col-form-label">Skills value</label>
+              <div class="SkillsValue">
+                <input class="form-control" name="skillvalue" type="number" value="{{this.skillvalue}}">
+              </div>
+            </div>
+            <div class="delete col-2">
+            <a href="/deleteskill/{{this.skill}}" class="deleteLink"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</a>  
+            </div>
+            
+          </div>
+        </div>
+        {{/each}}
+        <div class="text-center addskill">
+          <input type="button" class="btn btn-secondary" value="+" onClick="addInput('dynamicInput');">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Socail accounts</label>
+      <div class="socails col-10">
+        <div class="socail">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon2">facebook.com/</span>
+            <input type="text" name="link" class="form-control" placeholder="FB username" aria-label="Recipient's username" aria-describedby="basic-addon2" value="{{userInfo.accounts.Facebook}}">
+          </div>
+        </div>
+        <br>
+        <div class="socail">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon2">twitter.com/</span>
+            <input type="text" name="link" class="form-control" placeholder="Twitter username" aria-label="Recipient's username" aria-describedby="basic-addon2" value="{{userInfo.accounts.Twitter}}">
+          </div>
+        </div>
+        <br>
+        <div class="socail">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon2">instagram.com/</span>
+            <input type="text" name="link" class="form-control" placeholder="Instagram username" aria-label="Recipient's username" aria-describedby="basic-addon2" value="{{userInfo.accounts.Instagram}}">
+          </div>
+        </div>
+        <br>
+        <div class="socail">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon2">Linkedin.com/</span>
+            <input type="text" name="link" class="form-control" placeholder="Linkedin username" aria-label="Recipient's username" aria-describedby="basic-addon2" value="{{userInfo.accounts.Linkedin}}">
           </div>
         </div>
       </div>
-      {{/each}}  
-      <div class="text-center addskill">
-        <input type="button" class="btn btn-secondary" value="+" onClick="addInput('dynamicInput');">
-      </div>
     </div>
-  </div>
-
-  <div class="form-group row">
-    <label class="col-2 col-form-label">Socail accounts</label>
-    <div class="socails col-10">
-      <div class="socail">
-        <label class=" col-form-label">Facebook</label>
-        <input class="form-control" class="socailLink" name="link" type="text" value="{{userInfo.accounts.Facebook}}">
-      </div>
-      <div class="socail">
-        <label class="col-5 col-form-label">Twitter</label>
-        <input class="form-control" class="socailLink" name="link" type="text" value="{{userInfo.accounts.Twitter}}">
-      </div>
-      <div class="socail">
-        <label class="col-5 col-form-label">Instagram</label>
-        <input class="form-control" class="socailLink" name="link" type="text" value="{{userInfo.accounts.Instagram}}">
-      </div>
-      <div class="socail">
-        <label class="col-5 col-form-label">Linkedin</label>
-        <input class="form-control" class="socailLink" name="link" type="text" value="{{userInfo.accounts.Linkedin}}">
-      </div>
+    <div class="form-group row">
+      <input class="btn btn-primary save-btn" type="submit" value="Save">
     </div>
-  </div>
-
-  <div class="form-group row">
-    <input class="btn btn-primary save-btn" type="submit" value="Save">
-  </div>
-</form>
+  </form>
 </div>
 <script type="text/javascript" src="/js/request.js"></script>
 <script type="text/javascript" src="/js/update.js"></script>

@@ -6,6 +6,7 @@ module.exports = arr => {
   ourObj.campus = arr[0].campus;
   ourObj.cohortnum = arr[0].cohortnum;
   ourObj.email = arr[0].email;
+  ourObj.avatar = arr[0].avatar;
 
   var skills = arr.reduce((accum, item) => {
     accum[item.skill] = item.skillvalue;

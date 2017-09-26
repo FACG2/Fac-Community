@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
 const loginAuth = require('./login.js');
 const authenticate = require('./authenticate');
 const users = require('./users.js');
@@ -20,6 +19,8 @@ router.get('/auth/github', loginAuth.get);
 router.get('/auth/github/callback', authenticate.get);
 router.post('/skills', skills.post);
 router.get('/logout', logout.get);
+
+router.get('/editprofile', editProfile.get);
 router.get('/login', (req, res, next) => {
   res.render('login', {title: 'Home', cssPath: '/css/login.css'});
 });
@@ -32,22 +33,9 @@ router.get('/update', (req, res, next) => {
     });
 });
 
-// router.get('/profile', profile.getUserInfo);
-router.get('/profile/:username', profile.getUserInfo);
-
-router.get('/results', (req, res, next) => {
-  res.render('results', {title: 'Results', cssPath: '/css/results.css'});
-});
-
+router.get('/profile', profile.get);
+router.get('/profile/:username', profile.get);
+router.get('/deleteskill/:skill', skills.delete);
 router.get('/search', search.getAll);
-
-router.post('/updateuser', users.update);
-
-router.get('/editprofile', editProfile.get);
-
-// router.post('/editprofile', editProfile.get);
-
-router.get('/auth/github', loginAuth.get);
-router.get('/auth/github/callback', authenticate.get);
 
 module.exports = router;

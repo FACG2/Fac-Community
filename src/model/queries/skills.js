@@ -74,9 +74,25 @@ const checkSkill = (skill, cb) => {
   });
 };
 
+const deleteSkill = (Obj, cb) => {
+  const sql = {
+    text: `DELETE FROM skills WHERE skill=$1 AND user_id=$2`,
+    values: [Obj.skill, Obj.user_id]
+  };
+
+  connection.query(sql, (err, res) => {
+    if (err) {
+      cb(err);
+    } else {
+      cb(null, res);
+    }
+  });
+};
+
 module.exports = {
   addSkill,
   updateSkill,
   checkSkill,
-  getSkills
+  getSkills,
+  deleteSkill
 };

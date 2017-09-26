@@ -1,6 +1,6 @@
 const userFunctions = require('./../model/queries/users.js');
 
-exports.getUserInfo = (req, res, next) => {
+exports.get = (req, res, next) => {
   var username;
   if (typeof req.params.username === 'undefined') {
     username = req.user;
@@ -15,7 +15,8 @@ exports.getUserInfo = (req, res, next) => {
         if (err) {
           next();
         } else {
-          res.render('profile.hbs', {users: info,
+          console.log(info);
+          res.render('profile.hbs', {user: req.user,
             profile: info,
             title: 'profile',
             cssPath: '/css/profile.css',

@@ -21,3 +21,23 @@ exports.get = (req, res, next) => {
 exports.post = (req, res, next) => {
 
 };
+
+exports.delete = (req, res, next) => {
+  var username = req.cookies.username;
+  var Obj = {};
+  Obj.skill = req.params.skill;
+  users.getUserId(username, (err, obj) => {
+    if (err) {
+      next();
+    } else {
+      Obj.user_id = obj.id;
+      skills.deleteSkill(Obj, (err, deleted) => {
+        if (err) {
+          next();
+        } else {
+          res.redirect('/editprofile');
+        }
+      });
+    }
+  });
+};
