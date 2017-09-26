@@ -1,7 +1,13 @@
 const userFunctions = require('./../model/queries/users.js');
 
 exports.getUserInfo = (req, res, next) => {
-  userFunctions.getUserId(req.cookies.username, (err, obj) => {
+  var username;
+  if (typeof req.params.username === 'undefined') {
+    username = req.user;
+  } else {
+    username = req.params.username;
+  }
+  userFunctions.getUserId(username, (err, obj) => {
     if (err) {
       next();
     } else {
@@ -9,9 +15,8 @@ exports.getUserInfo = (req, res, next) => {
         if (err) {
           next();
         } else {
-          console.log('hellllllllllllo', info);
           res.render('profile.hbs', {users: info,
-            username: info[0].username,
+            profile: info[0],
             title: 'profile',
             cssPath: '/css/profile.css',
             cssPath2: '/coz-css/bootstrap.mini.css',
