@@ -1,33 +1,31 @@
 <nav class="navbar bg-faded">
-
   <div class="container">
     <ul class="nav navbar-nav pull-sm-left">
       <h4> Welcome {{user}} </h4>
       <a class="nav-link" id="editProfile" href="#">Edit profile</a>
     </ul>
-
     <form class="form-inline" action="/search" method="GETS">
       <input class="form-control mr-sm-2 abs" type="text" name="search" placeholder="Search" aria-label="Search" required>
       <button class="btn btn-primary my-2 my-sm-0 abs" id="subBtn" type="submit">Search</button>
     </form>
     <ul class="nav navbar-nav pull-sm-right">
       <a href="#" class="btn btn-danger">Logout</a>
-
     </ul>
   </div>
 </nav>
 <div class="container allResults">
-
   {{#each users}}
-  <div class="container" id="results">
-    <div class="searchResults">
-      <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src={{this.avatar}} alt={{this.name}}>
-        <div class="card-body">
-          <p class="card-text">{{this.name}}</p>
+  <a href="/profile/{{this.username}}">
+    <div id="results">
+      <div class="searchResults">
+        <div class="card">
+          <img class="card-img-top" src={{this.avatar}} alt={{this.name}}>
+          <div class="card-body">
+            <p class="card-text">{{this.name}}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </a>
   {{/each}}
 </div>

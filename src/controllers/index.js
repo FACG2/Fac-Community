@@ -6,7 +6,7 @@ const authenticate = require('./authenticate');
 const users = require('./users.js');
 const home = require('./home.js');
 const logout = require('./logout.js');
-
+const profile = require('./profile.js');
 const search = require('./search.js');
 
 const basicInfo = require('./getBasicInfo.js');
@@ -31,17 +31,7 @@ router.get('/update', (req, res, next) => {
     });
 });
 
-router.get('/profile', (req, res, next) => {
-  res.render('profile', {
-    title: 'profile',
-    cssPath: '/css/profile.css',
-    cssPath2: '/coz-css/bootstrap.mini.css',
-    cssPath3: '/coz-css/bootstrap.max.css',
-    cssPath4: '/coz-css/bootstrap.public.css',
-    cssPath5: '/css/home.css'
-
-  });
-});
+router.get('/profile/:username', profile.getUserInfo);
 
 router.get('/results', (req, res, next) => {
   res.render('results', {title: 'Results', cssPath: '/css/results.css'});

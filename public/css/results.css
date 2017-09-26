@@ -17,6 +17,7 @@ main{
 }
 .card{
   margin-bottom:10px;
+      width: 18rem !important;
 
 }
 h4{
