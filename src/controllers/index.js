@@ -31,6 +31,7 @@ router.get('/update', (req, res, next) => {
     });
 });
 
+router.get('/profile', profile.getUserInfo);
 router.get('/profile/:username', profile.getUserInfo);
 
 router.get('/results', (req, res, next) => {

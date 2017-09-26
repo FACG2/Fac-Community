@@ -148,7 +148,7 @@
                     });
                   })();
                   pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon', 'https://envato.ukiedev.com/ukiecard/style1/indexv.html', '5kkZUOwLw8', true, false, 'ZLMEgv7ZiuE');
-                </script><img src="assets/img/xphoto.png.pagespeed.ic.oJy1wey3EK.webp" alt="Ukieweb" data-pagespeed-url-hash="3896046660" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </script><img src={{profile.avatar}} alt={{profile.name}} data-pagespeed-url-hash="3896046660" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                 <!-- for women -->
                 <!-- <img src="./assets/img/photo_female.png" alt="Ukieweb"> -->
               </div>
@@ -156,9 +156,9 @@
             </div>
             <div class="col-xs-12 col-sm-7 col-lg-7">
               <!-- Your Name -->
-              <h1 class="title">Mahmoud Al Madhoun</h1>
+              <h1 class="title">{{profile.name}}</h1>
               <!-- Your Profession -->
-              <h3 class="sub-title">FullStack &amp; Javascript Developer</h3>
+              <h3 class="sub-title">{{profile.bio}}</h3>
               <!-- social icon -->
               <div class="social">
                 <ul class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="600">
