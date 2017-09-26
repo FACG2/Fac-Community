@@ -30,3 +30,17 @@ h1 {
 .addskill {
   margin: 15px 0
 }
+
+
+.deleteLink{
+    background-color: red;
+    padding: 2px 12px;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.delete{
+  margin-top: 34px;
+}

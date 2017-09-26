@@ -8,7 +8,6 @@ const errMiddleware = require('./middlewares/error.js');
 const authRoutes = require('./middlewares/authenticateRoutes.js');
 const helpers = require('./views/helpers/index');
 const app = express();
-
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine(
@@ -25,9 +24,10 @@ app.engine(
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser('secret'));
-app.use(errMiddleware);
 app.use(authRoutes);
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(controllers);
+app.use(errMiddleware.client);
+app.use(errMiddleware.server);
 app.set('port', process.env.PORT || 3000);
 module.exports = app;

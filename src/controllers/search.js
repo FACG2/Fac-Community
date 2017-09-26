@@ -11,7 +11,7 @@ exports.getAll = (req, res, next) => {
           cssPath: '/css/results.css',
           cssPath2: '/css/home.css',
           title: 'Results',
-          user:req.user,
+          user: req.user
         });
     }
   });

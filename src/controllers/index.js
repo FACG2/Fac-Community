@@ -19,6 +19,7 @@ router.get('/auth/github', loginAuth.get);
 router.get('/auth/github/callback', authenticate.get);
 router.post('/skills', skills.post);
 router.get('/logout', logout.get);
+
 router.get('/editprofile', editProfile.get);
 router.get('/login', (req, res, next) => {
   res.render('login', {title: 'Home', cssPath: '/css/login.css'});
@@ -32,10 +33,9 @@ router.get('/update', (req, res, next) => {
     });
 });
 
-
 router.get('/profile', profile.get);
 router.get('/profile/:username', profile.get);
-
+router.get('/deleteskill/:skill', skills.delete);
 router.get('/search', search.getAll);
 
 module.exports = router;
