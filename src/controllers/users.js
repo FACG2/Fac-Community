@@ -54,4 +54,56 @@ exports.update = (req, res, next) => {
   });
 };
 
+exports.edit = (req, res, next) => {
+  var obj = Object.assign({}, req.body);
+  obj.username = req.cookies.username;
+  users.updateUser(obj, (err, updated) => {
+    if (err) {
+      next(err);
+    } else {
+      users.getUserId(obj.username, (err, userID) => {
+        if (err) {
+          next();
+        } else {
+          if (Array.isArray(req.body.skill)) {
+            req.body.skill.forEach((skill, i) => {
+              var form = {skill: skill,
+                skillvalue: req.body.skillvalue[i],
+                user_id: userID.id};
+              skills.addSkill(form, (err, skills) => {
+                if (err) {
+                  next();
+                } else {
+                }
+              });
+            });
+          } else {
+            var form = {skill: req.body.skill,
+              skillvalue: req.body.skillvalue,
+              user_id: userID.id};
+            skills.updateSkill(form, (err, skills) => {
+              if (err) {
+                next();
+              } else {
+              }
+            });
+          }
+          req.body.link.forEach((link, i) => {
+            if (link !== '') {
+              var account = {
+                socail_network: networks[i],
+                link: link,
+                user_id: userID.id
+              };
+              accounts.updateAccount(account, (accounts) => {
+              });
+            }
+          });
+        }
+        res.redirect('/');
+      });
+    }
+  });
+};
+
 var networks = ['Facebook', 'Twitter', 'Instagram', 'Linkedin'];

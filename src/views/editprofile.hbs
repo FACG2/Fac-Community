@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Edit profile</h1>
-  <form id="update-form" action="/updateuser" method="POST" >
+  <form id="update-form" action="/editprofileinfo" method="POST" >
     <div class="form-group row">
       <label for="name-input" class="col-2 col-form-label">Full name</label>
       <div class="col-10">
@@ -45,7 +45,7 @@
           <div class="skill">
             <div class="skills col-5">
               <label class=" col-form-label">skill 1</label>
-              <br><input type="text" class="form-control" name="skill" value="{{this.skill}}">
+              <br><input type="text" class="form-control" name="skill" value="{{this.skill}}" disabled>
             </div>
             <div class="values col-5">
               <label class=" col-form-label">Skills value</label>
