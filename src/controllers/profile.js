@@ -15,7 +15,6 @@ exports.get = (req, res, next) => {
         if (err) {
           next();
         } else {
-          console.log(info);
           res.render('profile.hbs', {user: req.user,
             profile: info,
             title: 'profile',
