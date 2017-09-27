@@ -40,11 +40,11 @@ router.get('/update', (req, res, next) => {
     });
 });
 
-router.use(error.client);
-router.use(error.server);
 router.get('/profile', profile.get);
 router.get('/profile/:username', profile.get);
 router.get('/deleteskill/:skill', skills.delete);
 router.get('/search', search.getAll);
 
+router.use(error.client);
+router.use(error.server);
 module.exports = router;
