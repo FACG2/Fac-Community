@@ -1,4 +1,4 @@
-exports.client = (req, res) => {
+exports.client = (req, res, next) => {
   res.status(404).render('error', {
     layout: 'error',
     statusCode: 404,
@@ -6,7 +6,7 @@ exports.client = (req, res) => {
   });
 };
 
-exports.server = (err, req, res, next) => {
+exports.server = (req, res, next) => {
   res.status(500).render('error', {
     layout: 'error',
     statusCode: 500,
