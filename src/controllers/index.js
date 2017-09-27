@@ -10,6 +10,7 @@ const search = require('./search.js');
 const editProfile = require('./editProfile.js');
 const basicInfo = require('./getBasicInfo.js');
 const skills = require('./skills.js');
+const error = require('./error.js');
 
 router.get('/', home.get);
 
