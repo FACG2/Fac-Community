@@ -18,11 +18,11 @@ exports.get = (req, res, next) => {
           res.render('profile.hbs', {user: req.user,
             profile: info,
             title: 'profile',
-            cssPath: '/css/profile.css',
-            cssPath2: '/coz-css/bootstrap.mini.css',
-            cssPath3: '/coz-css/bootstrap.max.css',
-            cssPath4: '/coz-css/bootstrap.public.css',
-            cssPath5: '/css/home.css'});
+            cssPath4: '/css/profile.css',
+            cssPath5: '/coz-css/bootstrap.mini.css',
+            cssPath2: '/coz-css/bootstrap.max.css',
+            cssPath3: '/coz-css/bootstrap.public.css',
+            cssPath: '/css/home.css'});
         }
       });
     }
