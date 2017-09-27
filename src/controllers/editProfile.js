@@ -11,7 +11,7 @@ exports.get = (req, res, next) => {
         if (err) {
           next();
         } else {
-          res.render('editprofile', {title: 'Edit profile', user: info.name, userInfo: info, cssPath: '/css/update.css', cssPath2: '/css/home.css'});
+          res.render('editprofile', {title: 'Edit profile', user: req.cookies.username, userInfo: info, cssPath: '/css/update.css', cssPath2: '/css/home.css'});
         }
       });
     }
