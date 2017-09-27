@@ -7,7 +7,9 @@ const cookieParser = require('cookie-parser');
 const errMiddleware = require('./middlewares/error.js');
 const authRoutes = require('./middlewares/authenticateRoutes.js');
 const helpers = require('./views/helpers/index');
+
 const app = express();
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine(
