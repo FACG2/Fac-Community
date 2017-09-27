@@ -10,7 +10,7 @@ const search = require('./search.js');
 const editProfile = require('./editProfile.js');
 const basicInfo = require('./getBasicInfo.js');
 const skills = require('./skills.js');
-const error = require('./error.js');
+// const error = require('./error.js');
 
 router.get('/', home.get);
 
@@ -38,6 +38,4 @@ router.get('/profile', profile.get);
 router.get('/profile/:username', profile.get);
 router.get('/deleteskill/:skill', skills.delete);
 router.get('/search', search.getAll);
-router.use(error.client);
-router.use(error.server);
 module.exports = router;
