@@ -15,14 +15,18 @@ exports.get = (req, res, next) => {
         if (err) {
           next();
         } else {
-          res.render('profile.hbs', {user: req.user,
-            profile: info,
-            title: 'profile',
-            cssPath4: '/css/profile.css',
-            cssPath5: '/coz-css/bootstrap.mini.css',
-            cssPath2: '/coz-css/bootstrap.max.css',
-            cssPath3: '/coz-css/bootstrap.public.css',
-            cssPath: '/css/home.css'});
+          res.render('profile.hbs',
+            {
+              user: req.user,
+              profile: info,
+              title: 'profile',
+              cssPath4: '/css/profile.css',
+              cssPath5: '/coz-css/bootstrap.mini.css',
+              cssPath2: '/coz-css/bootstrap.max.css',
+              cssPath3: '/coz-css/bootstrap.public.css',
+              cssPath: '/css/home.css',
+              cssPath6: '/coz-css/A.css'
+            });
         }
       });
     }

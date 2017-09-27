@@ -45,7 +45,11 @@ CREATE TABLE accounts(
 INSERT INTO users (username,name,email,bio,campus,cohortnum,avatar) VALUES
 ('Ajour','Ahmed Ajour','abd@halees.com', 'halees bio','Gaza', 2,'https://avatars1.githubusercontent.com/u/28707990?v=4&s=460'),
 ('Madhoun','Mahmoud Al Madhoun','mahmoud@madhoun.com', 'madhoun bio','Gaza', 2,'https://avatars2.githubusercontent.com/u/3719666?v=4&s=400'),
-('Wadia','Mahmoud Wadia','mahmoud@wadia.com', 'wadia bio','Gaza', 2,'https://avatars3.githubusercontent.com/u/19922564?v=4&s=460');
+('Wadia','Mahmoud Wadia','mahmoud@wadia.com', 'wadia bio','Gaza', 2,'https://avatars3.githubusercontent.com/u/19922564?v=4&s=460'),
+('ahmed','Mahmoud Wadia','mahmoud@wadia.com', 'wadia bio','Gaza', 2,'https://avatars3.githubusercontent.com/u/19922564?v=4&s=460'),
+('smmir','Mahmoud Wadia','mahmoud@wadia.com', 'wadia bio','Gaza', 2,'https://avatars3.githubusercontent.com/u/19922564?v=4&s=460'),
+('mohammed','Mahmoud Wadia','mahmoud@wadia.com', 'wadia bio','Gaza', 2,'https://avatars3.githubusercontent.com/u/19922564?v=4&s=460'),
+('noor','Mahmoud Wadia','mahmoud@wadia.com', 'wadia bio','Gaza', 2,'https://avatars3.githubusercontent.com/u/19922564?v=4&s=460');
 
 
 INSERT INTO posts (user_id,title,context) VALUES

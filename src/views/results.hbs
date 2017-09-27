@@ -1,23 +1,25 @@
-
-
-
-</div>
 <div class="container allResults">
-  {{#each users}}
-  <a href="/profile/{{this.username}}">
-    <div id="results">
-      <div class="searchResults">
-        <div class="card">
-          <img class="card-img-top" src={{this.avatar}} alt={{this.name}}>
-          <div class="card-body">
-            <h4 class="card-title">{{this.name}}</h4>
-          </a>
+    <div class="row">
 
-            <p class="card-text"><span>@</span>{{this.username}}</p>
+  {{#each users}}
+    <div class="col">
+      <a href="/profile/{{this.username}}">
+        <div id="results">
+          <div class="searchResults">
+            <div class="card">
+              <img class="card-img-top" src={{this.avatar}} alt={{this.name}}>
+              <div class="card-body">
+                <h4 class="card-title">{{this.name}}</h4>
+              </a>
+
+                <p class="card-text"><span>@</span>{{this.username}}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   {{/each}}
+
+    </div>
 </div>
 <script type="text/javascript" src="/js/dropdown.js"></script>
