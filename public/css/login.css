@@ -4,8 +4,20 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
 
+}
+.background{
+  opacity: 0.2;
+
+}
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #ecf0f1;
+}
+.btn{
+  margin-bottom: 2%;
+  border: 1px solid white;
+}
 
 
 div{
