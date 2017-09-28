@@ -3,9 +3,9 @@
 ![FAC](https://media.licdn.com/media/p/8/005/0a3/300/0f370ec.png)
 ## Our idea:
 ### The problem:
-We noticed that Github is not a social environment, and also Gitter messages is not always sutible to use, on the other hand the social networks (like Facebook, twitter) is better for connection and making relationships, but also we can't explore others protoflio for example.
+*Why*-> We noticed that Github is not a social environment, and also Gitter messages is not always sutible to use, on the other hand the social networks (like Facebook, twitter) is better for connection and making relationships, but also we can't explore others protoflio for example.
 
-**So** we built a community **(A BIG FAMILY)** that contains current and past members of FAC, with contact info and some other details about the skills and projects.
+*What*-->**So** we built a community **(A BIG FAMILY)** that contains current and past members of FAC, with personal info and professional skills.
 
 ## Our users: :two_men_holding_hands: :two_women_holding_hands:
 ### Who?
@@ -16,9 +16,44 @@ Make relations, Work, Discuss, Cross culture.
 * The importance of being a community, a family and a big **international** network.
 *  FAC members needs a differant way to connect by a social media for example, with other campus.
 
-### User testing findings:
-* Good app :heart_eyes: , but UI needs more improvment.
+### Database Schema
 
-### you can see our MAGIC from [here](https://invis.io/3KDITYLYS) :boom: :fire: :
+
+### Flow chart 
+
+### User testing findings:
+
+#### Prototype 
+* Good app :heart_eyes: , but UI needs some edits.
+
+#### MVP user testing findings:
+* UI, UX still needs more improvment.
+* Bug with edit my profile (temporarily fixed).
+
+### Finished Tasks: 
+-[x] Login, auth with Github.
+-[x] General search box.
+-[x] Profile page with the needed data.
+
+### Unfinished Tasks (Future plans):
+-[x] Add discussions to the home page.
+-[x] Improve the UI,UX with new components.
+-[x] Work availability.
+
+### Technologies:
+``` HTML
+HTML, CSS, JS, ExpressJS, Bootstrap 4, Github authentication API v3
+```
+
+ # How to run? :key: :runner:
+ ### Visit the [Link](https://facommunity.herokuapp.com/)
+ 
+ ### A coder? don't worry it's open source!  :boom: :fire: :
+ 1) Clone the repo `https://github.com/FACG2/Fac-Community.git`
+ 2) Run $ npm install
+ 3) $ npm run build:db, npm run watch
+ 4) Use your browser and jump into `localhost:3000`
+ 
+
 
 Done by: Abdallah, Madhoun , Wadia , Ahmed :bowtie: .
