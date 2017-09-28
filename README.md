@@ -36,9 +36,9 @@ Make relations, Work, Discuss, Cross culture.
 - [x] Profile page with the needed data.
 
 ### Unfinished Tasks (Future plans):
-- [x] Add discussions to the home page.
-- [x] Improve the UI,UX with new components.
-- [x] Work availability.
+- [ ] Add discussions to the home page.
+- [ ] Improve the UI,UX with new components.
+- [ ] Work availability.
 
 ### Technologies:
 ``` HTML
