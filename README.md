@@ -31,14 +31,14 @@ Make relations, Work, Discuss, Cross culture.
 * Bug with edit my profile (temporarily fixed).
 
 ### Finished Tasks: 
--[x] Login, auth with Github.
--[x] General search box.
--[x] Profile page with the needed data.
+- [x] Login, auth with Github.
+- [x] General search box.
+- [x] Profile page with the needed data.
 
 ### Unfinished Tasks (Future plans):
--[x] Add discussions to the home page.
--[x] Improve the UI,UX with new components.
--[x] Work availability.
+- [x] Add discussions to the home page.
+- [x] Improve the UI,UX with new components.
+- [x] Work availability.
 
 ### Technologies:
 ``` HTML
