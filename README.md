@@ -17,7 +17,7 @@ Make relations, Work, Discuss, Cross culture.
 *  FAC members needs a differant way to connect by a social media for example, with other campus.
 
 ### Database Schema
-
+![DB](https://files.gitter.im/foundersandcoders/The-Knights-Team/6A46/Screenshot-from-2017-09-28-08-53-06.png)
 
 ### Flow chart 
 
