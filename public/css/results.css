@@ -1,46 +1,32 @@
-/*
-main{
-  height: 89vh;
-}*/
-.navbar{
-    background-color: #16a085;
-    height: 9vh;
-    margin-bottom: 1%;
-}
-.card{
+.card {
   text-align: center;
 }
-.card-title{
+
+.card-title {
   color: blue;
 }
-.card{
-margin-left:15px;
-width: 18rem !important;
 
+.card {
+  margin-left: 15px;
+  width: 18rem !important;
 }
-h4{
+
+h4 {
   color: white;
 }
-#subBtn{
-  cursor: pointer;
-}
-#editProfile{
-  background-color: silver;
-  padding: 2px;
-  text-align: center;
-  border-radius: 10%;
-}
-.allResults{
+
+.allResults {
   display: flex;
   justify-content: center;
   margin-left: 3%;
-margin-right:  : 3%:
-
+  margin-right: : 3%:
 }
-.searchFilter{
+
+.searchFilter {
   justify-content: center;
   margin-bottom: 2%;
 }
+
 .dropdown {
   background: #bdc3c7;
   position: relative;
@@ -50,7 +36,6 @@ margin-right:  : 3%:
   cursor: pointer;
   margin-left: 5px;
   margin-right: 5px;
-
 }
 
 .dropdown.is-opened {
@@ -98,9 +83,7 @@ margin-right:  : 3%:
   background: #e6e6e6;
 }
 
-.dropdown-inner,
-.dropdown-value,
-.dropdown-icon {
+.dropdown-inner, .dropdown-value, .dropdown-icon {
   pointer-events: none;
 }
 
@@ -110,41 +93,4 @@ margin-right:  : 3%:
 
 .is-opened .dropdown-icon {
   transform: rotateZ(180deg);
-}
-
-
-footer{
-  margin: 10px 0 0 0;
-	text-align: center;
-	color: #fff;
-	background-color: #414a4f;
-	padding: 10px 7px;
-font-size:20px;
-}
-footer p{
-	color: rgba(255,255,255,0.6);
-	margin: 0;
-}
-#heart{
-  color: red;
-  font-size: 30px;
-}
-@media (min-width: 1200px) {
-    .container{
-        max-width: 95%;
-    }
-}
-
-@media (max-width: 767PX) {
-  .navbar {
-    height: auto;
-  }
-  .navbar>.container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .form-inline{
-    justify-content: center;
-  }
 }

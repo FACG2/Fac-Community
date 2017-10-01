@@ -17,9 +17,10 @@ exports.get = (req, res, next) => {
         } else {
           res.render('profile.hbs',
             {
-              user: req.user,
+              // users: info,
+              user: username,
               profile: info,
-              title: 'profile',
+              title: 'Profile',
               cssPath4: '/css/profile.css',
               cssPath5: '/coz-css/bootstrap.mini.css',
               cssPath2: '/coz-css/bootstrap.max.css',

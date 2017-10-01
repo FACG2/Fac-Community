@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+
+
+<div id="main" class="main container-fluid">
+  <br><br>
+  <div class="row">
+    <h1 class="text-center hh1 col-md-10 col-md-offset-1">Hi <b>{{user}}</b> You can search about ...</h1>
+    <!-- <p class="typingEffect">Giving CSS text typing effect a try!</p> -->
+    <div id="font" class="dropping-texts text-center hh1 col-md-10 col-md-offset-1">
+      <div class="text-center hh1 col-md-10 col-md-offset-1">Students</div>
+      <div class="text-center hh1 col-md-10 col-md-offset-1">Place</div>
+      <div class="text-center hh1 col-md-10 col-md-offset-1">Cohort</div>
+      <div class="text-center hh1 col-md-10 col-md-offset-1">Skills</div>
+      <div class="text-center hh1 col-md-10 col-md-offset-1">EVERYONE!</div>
+    </div>
+
+  </div>
+  <br>
+  <div class="row">
+    <p class="col-md-6 col-md-offset-3" id="stip">
+      <i class="icon-lightbulb icon-large"></i> <b>TIP</b> - Type place , e.g. "London"
+    </p>
+    <form action="/search" method="GET">
+      <div class="input-group input-group-lg col-md-6 col-md-offset-3">
+        <input name="search" autofocus="" class="form-control" type="text">
+        <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary">
+              Search
+            </button> </span>
+    </form>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>

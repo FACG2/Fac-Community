@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Edit profile</h1>
+  <h1 class="title">Edit profile</h1>
   <form id="update-form" action="/editprofileinfo" method="POST" >
     <div class="form-group row">
       <label for="name-input" class="col-2 col-form-label">Full name</label>
@@ -39,7 +39,7 @@
     <div class="skills row ">
       <label for="skillsForms" class="col-2 col-form-label">Skills</label>
       <div class="col-10" id="skillsForms">
-        
+
         {{#each userInfo.skills}}
         <div id="dynamicInput">
           <div class="skill">
@@ -54,9 +54,9 @@
               </div>
             </div>
             <div class="delete col-2">
-            <a href="/deleteskill/{{this.skill}}" class="deleteLink"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</a>  
+            <a href="/deleteskill/{{this.skill}}" class="deleteLink"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</a>
             </div>
-            
+
           </div>
         </div>
         {{/each}}
