@@ -10,6 +10,8 @@ const search = require('./search.js');
 const editProfile = require('./editProfile.js');
 const basicInfo = require('./getBasicInfo.js');
 const skills = require('./skills.js');
+const update = require('./update.js');
+const signIn = require('./signIn');
 
 router.get('/', home.get);
 
@@ -21,26 +23,10 @@ router.post('/skills', skills.post);
 router.get('/logout', logout.get);
 router.post('/editprofileinfo', users.edit);
 router.get('/editprofile', editProfile.get);
-
-router.get('/login', (req, res, next) => {
-  res.render('login',
-    {
-      title: 'Home',
-      cssPath: '/css/login.css'
-    });
-});
-router.get('/update', (req, res, next) => {
-  res.render('update',
-    {
-      title: 'Update',
-      user: req.user,
-      cssPath: '/css/update.css',
-      cssPath2: '/css/home.css'
-    });
-});
-
+router.get('/login', signIn.get);
+router.get('/update', update.get);
 router.get('/profile', profile.get);
-router.get('/profile/:username', profile.get);
+router.get('/:username', profile.get);
 router.get('/deleteskill/:skill', skills.delete);
 router.get('/search', search.getAll);
 
