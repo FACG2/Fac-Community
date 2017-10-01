@@ -1,5 +1,9 @@
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/config.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/config.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:3,(anonymous_0)
 FNF:1
 FNH:1
@@ -26,7 +30,11 @@ BRF:6
 BRH:3
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/app.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/app.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FNF:0
 FNH:0
 DA:1,2
@@ -59,7 +67,11 @@ BRF:2
 BRH:2
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/authenticate.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/authenticate.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:3,(anonymous_0)
 FN:4,(anonymous_1)
 FN:8,(anonymous_2)
@@ -140,7 +152,11 @@ BRF:16
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/editProfile.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/editProfile.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:4,(anonymous_0)
 FN:6,(anonymous_1)
 FN:10,(anonymous_2)
@@ -169,7 +185,11 @@ BRF:4
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/getBasicInfo.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/getBasicInfo.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:3,(anonymous_0)
 FN:5,(anonymous_1)
 FNF:2
@@ -191,7 +211,11 @@ BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/home.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/home.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:2,(anonymous_0)
 FNF:1
 FNH:1
@@ -200,7 +224,11 @@ DA:2,2
 DA:3,4
 DA:4,4
 DA:5,2
+<<<<<<< HEAD
+DA:7,2
+=======
 DA:14,2
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 LF:5
 LH:5
 BRDA:4,0,0,2
@@ -209,9 +237,19 @@ BRF:2
 BRH:2
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/index.js
+FN:26,(anonymous_0)
+FN:33,(anonymous_1)
+FNF:2
+FNH:0
+FNDA:0,(anonymous_0)
+FNDA:0,(anonymous_1)
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/index.js
 FNF:0
 FNH:0
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 DA:1,2
 DA:2,2
 DA:3,2
@@ -224,15 +262,34 @@ DA:9,2
 DA:10,2
 DA:11,2
 DA:12,2
+<<<<<<< HEAD
+DA:15,2
+DA:17,2
+DA:18,2
+=======
 DA:13,2
 DA:14,2
 DA:17,2
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 DA:19,2
 DA:20,2
 DA:21,2
 DA:22,2
 DA:23,2
 DA:24,2
+<<<<<<< HEAD
+DA:26,2
+DA:27,0
+DA:33,2
+DA:34,0
+DA:43,2
+DA:44,2
+DA:45,2
+DA:46,2
+DA:48,2
+LF:30
+LH:28
+=======
 DA:25,2
 DA:26,2
 DA:27,2
@@ -244,11 +301,16 @@ DA:32,2
 DA:34,2
 LF:30
 LH:30
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/login.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/login.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:3,(anonymous_0)
 FNF:1
 FNH:0
@@ -263,7 +325,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/logout.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/logout.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:1,(anonymous_0)
 FNF:1
 FNH:0
@@ -278,7 +344,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/profile.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/profile.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:3,(anonymous_0)
 FN:10,(anonymous_1)
 FN:14,(anonymous_2)
@@ -311,7 +381,11 @@ BRF:6
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/search.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/search.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:3,(anonymous_0)
 FN:4,(anonymous_1)
 FNF:2
@@ -332,6 +406,9 @@ BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/skills.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/signIn.js
 FN:1,(anonymous_0)
 FNF:1
@@ -346,6 +423,7 @@ BRH:0
 end_of_record
 TN:
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/skills.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:4,(anonymous_0)
 FN:6,(anonymous_1)
 FN:10,(anonymous_2)
@@ -400,6 +478,9 @@ BRF:8
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/controllers/users.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/update.js
 FN:1,(anonymous_0)
 FNF:1
@@ -419,11 +500,18 @@ BRH:0
 end_of_record
 TN:
 SF:/home/mhd/Desktop/Fac-Community/src/controllers/users.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:5,(anonymous_0)
 FN:8,(anonymous_1)
 FN:12,(anonymous_2)
 FN:17,(anonymous_3)
 FN:21,(anonymous_4)
+<<<<<<< HEAD
+FN:32,(anonymous_5)
+FN:40,(anonymous_6)
+FN:47,(anonymous_7)
+FNF:8
+=======
 FN:33,(anonymous_5)
 FN:42,(anonymous_6)
 FN:49,(anonymous_7)
@@ -436,6 +524,7 @@ FN:87,(anonymous_13)
 FN:94,(anonymous_14)
 FN:101,(anonymous_15)
 FNF:16
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FNH:0
 FNDA:0,(anonymous_0)
 FNDA:0,(anonymous_1)
@@ -445,6 +534,8 @@ FNDA:0,(anonymous_4)
 FNDA:0,(anonymous_5)
 FNDA:0,(anonymous_6)
 FNDA:0,(anonymous_7)
+<<<<<<< HEAD
+=======
 FNDA:0,(anonymous_8)
 FNDA:0,(anonymous_9)
 FNDA:0,(anonymous_10)
@@ -453,6 +544,7 @@ FNDA:0,(anonymous_12)
 FNDA:0,(anonymous_13)
 FNDA:0,(anonymous_14)
 FNDA:0,(anonymous_15)
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 DA:1,2
 DA:2,2
 DA:3,2
@@ -472,6 +564,19 @@ DA:21,0
 DA:22,0
 DA:23,0
 DA:29,0
+<<<<<<< HEAD
+DA:32,0
+DA:33,0
+DA:34,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:47,0
+DA:53,0
+DA:59,2
+LF:28
+LH:5
+=======
 DA:30,0
 DA:33,0
 DA:34,0
@@ -509,6 +614,7 @@ DA:106,0
 DA:112,2
 LF:54
 LH:6
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 BRDA:9,0,0,0
 BRDA:9,0,1,0
 BRDA:13,1,0,0
@@ -517,6 +623,17 @@ BRDA:16,2,0,0
 BRDA:16,2,1,0
 BRDA:22,3,0,0
 BRDA:22,3,1,0
+<<<<<<< HEAD
+BRDA:33,4,0,0
+BRDA:33,4,1,0
+BRDA:41,5,0,0
+BRDA:41,5,1,0
+BRF:12
+BRH:0
+end_of_record
+TN:
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/helpers/parseUser.js
+=======
 BRDA:29,4,0,0
 BRDA:29,4,1,0
 BRDA:34,5,0,0
@@ -540,6 +657,7 @@ BRH:0
 end_of_record
 TN:
 SF:/home/mhd/Desktop/Fac-Community/src/helpers/parseUser.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:1,(anonymous_0)
 FN:11,(anonymous_1)
 FN:16,(anonymous_2)
@@ -574,7 +692,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/middlewares/authenticateRoutes.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/middlewares/authenticateRoutes.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:1,(anonymous_0)
 FN:15,(anonymous_1)
 FNF:2
@@ -602,7 +724,11 @@ BRF:4
 BRH:1
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/middlewares/error.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/middlewares/error.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:1,(anonymous_0)
 FNF:1
 FNH:0
@@ -618,7 +744,11 @@ BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/model/database/dbConnection.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/model/database/dbConnection.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FNF:0
 FNH:0
 DA:1,2
@@ -632,6 +762,17 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/model/queries/accounts.js
+FN:3,(anonymous_0)
+FN:9,(anonymous_1)
+FN:20,(anonymous_2)
+FN:26,(anonymous_3)
+FN:35,(anonymous_4)
+FN:41,(anonymous_5)
+FN:50,(anonymous_6)
+FN:55,(anonymous_7)
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/model/queries/accounts.js
 FN:3,(anonymous_0)
 FN:9,(anonymous_1)
@@ -641,6 +782,7 @@ FN:33,(anonymous_4)
 FN:39,(anonymous_5)
 FN:48,(anonymous_6)
 FN:53,(anonymous_7)
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FNF:8
 FNH:0
 FNDA:0,(anonymous_0)
@@ -657,6 +799,40 @@ DA:4,0
 DA:9,0
 DA:10,0
 DA:11,0
+<<<<<<< HEAD
+DA:12,0
+DA:14,0
+DA:15,0
+DA:20,2
+DA:21,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:30,0
+DA:35,2
+DA:36,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:45,0
+DA:50,2
+DA:51,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:59,0
+DA:64,2
+LF:28
+LH:6
+BRDA:10,0,0,0
+BRDA:10,0,1,0
+BRDA:27,1,0,0
+BRDA:27,1,1,0
+BRDA:42,2,0,0
+BRDA:42,2,1,0
+BRDA:56,3,0,0
+BRDA:56,3,1,0
+=======
 DA:13,0
 DA:18,2
 DA:19,0
@@ -687,11 +863,16 @@ BRDA:40,2,0,0
 BRDA:40,2,1,0
 BRDA:54,3,0,0
 BRDA:54,3,1,0
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 BRF:8
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/model/queries/search.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/model/queries/search.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:3,(anonymous_0)
 FN:11,(anonymous_1)
 FNF:2
@@ -715,7 +896,11 @@ BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/model/queries/skills.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/model/queries/skills.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:3,(anonymous_0)
 FN:10,(anonymous_1)
 FN:19,(anonymous_2)
@@ -801,7 +986,11 @@ BRF:14
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/model/queries/users.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/model/queries/users.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:4,(anonymous_0)
 FN:9,(anonymous_1)
 FN:18,(anonymous_2)
@@ -900,7 +1089,11 @@ BRF:16
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/services/github.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/services/github.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:6,(anonymous_0)
 FN:14,(anonymous_1)
 FN:24,(anonymous_2)
@@ -931,7 +1124,11 @@ BRF:2
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/views/helpers/first.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/views/helpers/first.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:1,(anonymous_0)
 FNF:1
 FNH:0
@@ -943,7 +1140,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/views/helpers/index.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/views/helpers/index.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FNF:0
 FNH:0
 DA:1,2
@@ -953,7 +1154,11 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
+SF:/home/abdallah/bootcamp/projects/Fac-Community/src/views/helpers/smoll.js
+=======
 SF:/home/mhd/Desktop/Fac-Community/src/views/helpers/smoll.js
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 FN:1,(anonymous_0)
 FNF:1
 FNH:0

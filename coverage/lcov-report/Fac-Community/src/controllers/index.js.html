@@ -20,9 +20,15 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
+<<<<<<< HEAD
+        <span class="strong">93.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/30</span>
+=======
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
         <span class='fraction'>30/30</span>
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,6 +36,16 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
+<<<<<<< HEAD
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>28/30</span>
+=======
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
         <span class='fraction'>0/0</span>
@@ -38,6 +54,7 @@
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
         <span class='fraction'>30/30</span>
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
       </div>
     </div>
   </div>
@@ -77,9 +94,27 @@
 32
 33
 34
+<<<<<<< HEAD
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+=======
 35</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -103,8 +138,29 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<<<<<<< HEAD
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+=======
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -123,9 +179,13 @@ const search = require('./search.js');
 const editProfile = require('./editProfile.js');
 const basicInfo = require('./getBasicInfo.js');
 const skills = require('./skills.js');
+<<<<<<< HEAD
+// const error = require('./error.js');
+=======
 const update = require('./update.js');
 const signIn = require('./signIn');
 &nbsp;
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 &nbsp;
 router.get('/', home.get);
 &nbsp;
@@ -135,12 +195,37 @@ router.get('/auth/github', loginAuth.get);
 router.get('/auth/github/callback', authenticate.get);
 router.post('/skills', skills.post);
 router.get('/logout', logout.get);
+<<<<<<< HEAD
+router.post('/editprofileinfo', users.update);
+router.get('/editprofile', editProfile.get);
+&nbsp;
+router.get('/login', <span class="fstat-no" title="function not covered" >(r</span>eq, res, next) =&gt; {
+<span class="cstat-no" title="statement not covered" >  res.render('login',</span>
+    {
+      title: 'Home',
+      cssPath: '/css/login.css'
+    });
+});
+router.get('/update', <span class="fstat-no" title="function not covered" >(r</span>eq, res, next) =&gt; {
+<span class="cstat-no" title="statement not covered" >  res.render('update',</span>
+    {
+      title: 'Update',
+      user: req.user,
+      cssPath: '/css/update.css',
+      cssPath2: '/css/home.css'
+    });
+});
+&nbsp;
+router.get('/profile', profile.get);
+router.get('/profile/:username', profile.get);
+=======
 router.post('/editprofileinfo', users.edit);
 router.get('/editprofile', editProfile.get);
 router.get('/login', signIn.get);
 router.get('/update', update.get);
 router.get('/profile', profile.get);
 router.get('/:username', profile.get);
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 router.get('/deleteskill/:skill', skills.delete);
 router.get('/search', search.getAll);
 &nbsp;
@@ -151,7 +236,11 @@ module.exports = router;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
+<<<<<<< HEAD
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 01 2017 12:02:11 GMT+0300 (EEST)
+=======
   generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 01 2017 13:31:09 GMT+0300 (EEST)
+>>>>>>> edd225323ac6257b837adbee8760a4609de7cf26
 </div>
 </div>
 <script src="../../../prettify.js"></script>
