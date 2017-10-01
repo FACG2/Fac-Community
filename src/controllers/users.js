@@ -3,6 +3,7 @@ const skills = require('./../model/queries/skills.js');
 const accounts = require('../model/queries/accounts.js');
 
 exports.update = (req, res, next) => {
+  console.log(req.body);
   var obj = Object.assign({}, req.body);
   obj.username = req.user;
   users.updateUser(obj, (err, updated) => {
@@ -34,7 +35,6 @@ exports.update = (req, res, next) => {
                 if (err) {
                   next(err);
                 } else {
-                  console.log(skills);
                 }
               });
             }
