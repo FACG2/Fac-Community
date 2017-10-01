@@ -19,6 +19,7 @@ exports.get = (req, res, next) => {
               cssPath: '/css/update.css',
               cssPath2: '/css/home.css'
             });
+
         }
       });
     }
