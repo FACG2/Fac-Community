@@ -18,7 +18,6 @@ test("Check the user's skill existing", (t) => {
   });
 });
 
-
 // test('get user skills', (t) => {
 //   skillFunctions.getSkills('JS', (err, res) => {
 //     console.log('ssssssssssssssssssssssssssssssssssssssssss', err);
