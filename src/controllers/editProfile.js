@@ -11,6 +11,7 @@ exports.get = (req, res, next) => {
         if (err) {
           next();
         } else {
+
           res.render('editprofile',
             {
               title: 'Edit profile',
