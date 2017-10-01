@@ -1,14 +1,12 @@
-
 exports.get = (req, res, next) => {
   const username = req.signedCookies.user;
   if (username) {
-    res.render('home',
+    res.render('update',
       {
-        user: username,
-        title: 'Home',
-        cssPath: '/css/home.css',
-        cssPath2: '/css/search.css',
-        home: 'home'
+        title: 'Update',
+        user: req.user,
+        cssPath: '/css/update.css',
+        cssPath2: '/css/home.css'
       });
   } else {
     res.render('login',
