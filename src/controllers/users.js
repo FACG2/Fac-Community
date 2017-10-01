@@ -11,7 +11,7 @@ exports.update = (req, res, next) => {
     } else {
       users.getUserId(obj.username, (err, userID) => {
         if (err) {
-          next();
+          next(err);
         } else {
           if (Array.isArray(req.body.skill)) {
             req.body.skill.forEach((skill, i) => {
@@ -20,21 +20,24 @@ exports.update = (req, res, next) => {
                 user_id: userID.id};
               skills.addSkill(form, (err, skills) => {
                 if (err) {
-                  next();
+                  next(err);
                 } else {
                 }
               });
             });
           } else {
-            var form = {skill: req.body.skill,
-              skillvalue: req.body.skillvalue,
-              user_id: userID.id};
-            skills.addSkill(form, (err, skills) => {
-              if (err) {
-                next();
-              } else {
-              }
-            });
+            if (req.body.skill) {
+              var form = {skill: req.body.skill,
+                skillvalue: req.body.skillvalue,
+                user_id: userID.id};
+              skills.addSkill(form, (err, skills) => {
+                if (err) {
+                  next(err);
+                } else {
+                  console.log(skills);
+                }
+              });
+            }
           }
           req.body.link.forEach((link, i) => {
             if (link !== '') {
