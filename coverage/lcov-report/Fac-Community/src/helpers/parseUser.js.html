@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Fac-Community/src/helpers/parseUser.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">Fac-Community/src/helpers</a> parseUser.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.26% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.56% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/18</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = <span class="fstat-no" title="function not covered" >ar</span>r =&gt; {
+  var ourObj = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >  ourObj.name = arr[0].name;</span>
+<span class="cstat-no" title="statement not covered" >  ourObj.email = arr[0].email;</span>
+<span class="cstat-no" title="statement not covered" >  ourObj.bio = arr[0].bio;</span>
+<span class="cstat-no" title="statement not covered" >  ourObj.campus = arr[0].campus;</span>
+<span class="cstat-no" title="statement not covered" >  ourObj.cohortnum = arr[0].cohortnum;</span>
+<span class="cstat-no" title="statement not covered" >  ourObj.email = arr[0].email;</span>
+<span class="cstat-no" title="statement not covered" >  ourObj.avatar = arr[0].avatar;</span>
+&nbsp;
+  var skills = <span class="cstat-no" title="statement not covered" >arr.reduce(<span class="fstat-no" title="function not covered" >(a</span>ccum, item) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    accum[item.skill] = item.skillvalue;</span>
+<span class="cstat-no" title="statement not covered" >    return accum;</span>
+  }, {});
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  ourObj.skills = Object.keys(skills).map(<span class="fstat-no" title="function not covered" >sk</span>ill =&gt; (<span class="cstat-no" title="statement not covered" >{ skill, skillvalue: skills[skill] })</span>);</span>
+&nbsp;
+  var accounts = <span class="cstat-no" title="statement not covered" >arr.reduce(<span class="fstat-no" title="function not covered" >(a</span>ccum, item) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    accum[item.socail_network] = item.link;</span>
+<span class="cstat-no" title="statement not covered" >    return accum;</span>
+  }, {});
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  ourObj.accounts = accounts;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return ourObj;</span>
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 01 2017 12:02:11 GMT+0300 (EEST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
