@@ -15,10 +15,6 @@ html, body {
   margin-bottom: 1%;
 }
 
-.height {
-  height: 100vh;
-}
-
 a {
   margin-left: 5px;
   margin-right: 5px;
@@ -49,7 +45,7 @@ h4 {
 }
 
 footer {
-  margin-top: 5em;
+  margin-top: 20px;
   text-align: center;
   color: #fff;
   background-color: #414a4f;
@@ -68,9 +64,9 @@ footer p {
 }
 
 @media (min-width: 1200px) {
-  .container {
+  /*.container {
     max-width: 95%;
-  }
+  }*/
 }
 
 @media (max-width: 767PX) {
