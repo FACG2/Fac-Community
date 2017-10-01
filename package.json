@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "testQ": "NODE_ENV=test node src/tests/users.test.js | tap-spec  && NODE_ENV=test node src/tests/skills.test.js | tap-spec && NODE_ENV=test node src/tests/accounts.test.js | tap-spec && NODE_ENV=test node src/tests/comments.test.js | tap-spec && NODE_ENV=test node src/tests/posts.test.js| tap-spec",
-    "test": "NODE_ENV=test node src/tests/routes.test.js | tap-spec",
-    "coverage": "nyc npm test",
+    "test-cov": "NODE_ENV=test node src/tests/routes.test.js | tap-spec",
     "start": "NODE_ENV=development node src/index.js",
     "watch": "NODE_ENV=test nodemon src/index.js",
     "build:db": "NODE_ENV=test node src/model/database/dbBuild.js",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov"
+    "test": "nyc tap src/tests/*.test.js",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
     "type": "git",
