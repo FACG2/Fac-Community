@@ -73,7 +73,7 @@ const checkUser = (username, cb) => {
 
 const addUser = (Obj, cb) => {
   const sql = {
-    text: `INSERT INTO users (username, name, email,avatar) VALUES ($1,$2,$3,$4)`,
+    text: `INSERT INTO users (username, name, email,avatar) VALUES ($1,$2,$3,$4) RETURNING id`,
     values: [Obj.login, Obj.name, Obj.email, Obj.avatar_url]
   };
 
