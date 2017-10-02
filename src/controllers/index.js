@@ -13,7 +13,6 @@ const skills = require('./skills.js');
 const update = require('./update.js');
 const signIn = require('./signIn');
 
-
 router.get('/', home.get);
 
 router.post('/updateuser', users.update);
@@ -27,7 +26,7 @@ router.get('/editprofile', editProfile.get);
 router.get('/login', signIn.get);
 router.get('/update', update.get);
 router.get('/profile', profile.get);
-router.get('/:username', profile.get);
+router.get('/profile/:username', profile.get);
 router.get('/deleteskill/:skill', skills.delete);
 router.get('/search', search.getAll);
 
