@@ -2,6 +2,7 @@ language: node_js
 node_js:
  - "node"
 install:
+  - npm install -g pg
   - npm install -g codecov
 after_success: npm run coverage
 services:
