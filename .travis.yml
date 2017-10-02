@@ -4,3 +4,9 @@ node_js:
 install:
   - npm install -g codecov
 after_success: npm run coverage
+services:
+  - postgresql
+env:
+  - DB_CONFIG.database=postgres://postgres:postgres@localhost:5432/community
+before_script:
+  - NODE_ENV=test node src/model/database/dbBuild.js
