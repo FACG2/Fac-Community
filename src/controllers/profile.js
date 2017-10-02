@@ -17,8 +17,7 @@ exports.get = (req, res, next) => {
         } else {
           res.render('profile.hbs',
             {
-              // users: info,
-              user: username,
+              user: req.user,
               profile: info,
               title: 'Profile',
               cssPath4: '/css/profile.css',

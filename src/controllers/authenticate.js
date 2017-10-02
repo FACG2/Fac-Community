@@ -1,5 +1,6 @@
 const github = require('./../services/github');
 const usersFunctions = require('./../model/queries/users.js');
+
 exports.get = (req, res, next) => {
   github.fetchToken(req.query.code, (err, accessToken) => {
     if (err) {
