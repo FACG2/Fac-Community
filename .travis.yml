@@ -10,4 +10,4 @@ services:
 env:
   - DB_CONFIG.database=postgres://postgres:postgres@localhost:5432/community
 before_script:
-  - NODE_ENV=test node src/model/database/dbBuild.js
+  - node src/model/database/dbBuild.js
