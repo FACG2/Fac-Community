@@ -4,6 +4,7 @@ node_js:
 install:
   - npm install -g pg
   - npm install -g codecov
+  - npm install
 after_success: npm run coverage
 services:
   - postgresql
