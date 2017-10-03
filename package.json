@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "![FAC](https://media.licdn.com/media/p/8/005/0a3/300/0f370ec.png) ## Our idea: ### The problem:  We noticed that Github is not a social environment, and also Gitter messages is not always sutible to use, on the other hand the social networks (like Facebook, twitter) is better for connection and making relationships, but also we can't explore others protoflio for example.",
   "main": "index.js",
+  "nyc": {
+    "include": [
+      "src/**/**/*.js"
+    ],
+     "all": true
+  },
   "scripts": {
     "testt": "NODE_ENV=test node src/tests/users.test.js | tap-spec  && NODE_ENV=test node src/tests/skills.test.js | tap-spec && NODE_ENV=test node src/tests/accounts.test.js | tap-spec && NODE_ENV=test node src/tests/comments.test.js | tap-spec && NODE_ENV=test node src/tests/posts.test.js| tap-spec",
     "test-cov": "NODE_ENV=test node src/tests/routes.test.js | tap-spec",
@@ -10,7 +16,7 @@
     "watch": "NODE_ENV=test nodemon src/index.js",
     "build:db": "NODE_ENV=test node src/model/database/dbBuild.js",
     "test": "NODE_ENV=test tape src/tests/*.test.js | tap-spec",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+    "coverage": "nyc npm test"
   },
   "repository": {
     "type": "git",
