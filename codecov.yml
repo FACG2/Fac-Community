@@ -3,4 +3,4 @@ codecov:
 coverage:
   parsers:
     javascript:
-      enable_partials: yes
+      enable_partials: no
