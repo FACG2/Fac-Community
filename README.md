@@ -1,3 +1,10 @@
+[![codecov](https://codecov.io/gh/FACG2/Fac-Community/branch/master/graph/badge.svg)](https://codecov.io/gh/FACG2/Fac-Community)
+[![Coverage Status](https://coveralls.io/repos/github/FACG2/Fac-Community/badge.svg)](https://coveralls.io/github/FACG2/Fac-Community)
+[![travis](https://travis-ci.org/FACG2/Fac-Community.svg?branch=master
+)](https://travis-ci.org/FACG2/Fac-Community)
+
+
+
 # FAC Community :globe_with_meridians:
 
 ![FAC](https://media.licdn.com/media/p/8/005/0a3/300/0f370ec.png)
@@ -19,18 +26,18 @@ Make relations, Work, Discuss, Cross culture.
 ### Database Schema
 ![DB](https://files.gitter.im/foundersandcoders/The-Knights-Team/6A46/Screenshot-from-2017-09-28-08-53-06.png)
 
-### Flow chart 
+### Flow chart
 
 ### User testing findings:
 
-#### Prototype 
+#### Prototype
 * Good app :heart_eyes: , but UI needs some edits.
 
 #### MVP user testing findings:
 * UI, UX still needs more improvment.
 * Bug with edit my profile (temporarily fixed).
 
-### Finished Tasks: 
+### Finished Tasks:
 - [x] Login, auth with Github.
 - [x] General search box.
 - [x] Profile page with the needed data.
@@ -47,13 +54,13 @@ HTML, CSS, JS, ExpressJS, Bootstrap 4, Github authentication API v3
 
  # How to run? :key: :runner:
  ### Visit the [Link](https://facommunity.herokuapp.com/)
- 
+
  ### A coder? don't worry it's open source!  :boom: :fire: :
  1) Clone the repo `https://github.com/FACG2/Fac-Community.git`
  2) Run $ npm install
  3) $ npm run build:db, npm run watch
  4) Use your browser and jump into `localhost:3000`
- 
+
 
 
 Done by: Abdallah, Madhoun , Wadia , Ahmed :bowtie: .
