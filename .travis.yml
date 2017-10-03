@@ -8,8 +8,8 @@ install:
 after_success: npm run coverage
 services:
   - postgresql
-env:
-  - DB_CONFIG.database=postgres://postgres:postgres@localhost:5432/community
+# env:
+#   - DB_CONFIG.database=postgres://postgres:postgres@localhost:5432/community
 before_script:
   - psql -c 'create database community;' -U postgres
   # - psql -c "CREATE USER postgres WITH PASSWORD 'postgres';" -U postgres
