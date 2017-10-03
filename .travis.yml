@@ -11,8 +11,6 @@ services:
 env:
   - NODE_ENV=test
   - TEST_DATABASE=postgres://postgres:postgres@localhost:5432/community
-before_script:
-  - psql -c 'create database community;' -U postgres
-  - npm run build:db
-  # - psql -c "CREATE USER postgres WITH PASSWORD 'postgres';" -U postgres
-  # - node src/model/database/dbBuild.js postgres://postgres:postgres@127.0.0.1:5432/community
+# before_script:
+#   - psql -c 'create database community;' -U postgres
+#   - npm run build:db
