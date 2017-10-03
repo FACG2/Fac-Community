@@ -16,6 +16,7 @@
     "watch": "NODE_ENV=test nodemon src/index.js",
     "build:db": "NODE_ENV=test node src/model/database/dbBuild.js",
     "test": "NODE_ENV=test tape src/tests/*.test.js | tap-spec",
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "coverage": "nyc npm test"
   },
   "repository": {

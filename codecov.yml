@@ -1,2 +1,6 @@
 codecov:
   token: 08872cb7-2dc9-4c1f-8d64-e23f341c0341
+coverage:
+  parsers:
+    javascript:
+      enable_partials: yes
