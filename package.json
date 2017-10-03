@@ -22,7 +22,10 @@
     "type": "git",
     "url": "git+https://github.com/FACG2/Fac-Community.git"
   },
-  "author": "",
+  "author": "Abdallah <abdallah.halees@gmail.com>
+              Wadia <mahmoud.alwadia@gmail.com>
+              Ahmed <ahmed.ajourr@gmail.com>
+              AlMadhoun <mrm7moud@hotmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FACG2/Fac-Community/issues"
