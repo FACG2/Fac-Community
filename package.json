@@ -16,7 +16,7 @@
     "watch": "NODE_ENV=test nodemon src/index.js",
     "build:db": "NODE_ENV=test node src/model/database/dbBuild.js",
     "test": "NODE_ENV=test tape src/tests/*.test.js | tap-spec",
-    "coverage": "nyc npm test"
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "codecov": "^2.3.0",
+    "coveralls": "^3.0.0",
     "eslint": "^4.8.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
