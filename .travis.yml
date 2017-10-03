@@ -12,3 +12,4 @@ env:
   - DB_CONFIG.database=postgres://127.0.0.1:5432/community
 before_script:
   - npm run build:db
+  - psql -c 'create database community;' -U postgres
