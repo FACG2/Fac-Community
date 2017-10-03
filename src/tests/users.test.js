@@ -7,7 +7,7 @@ const {
 } = require('./helpers/db.js');
 
 test("Check the user's existing", (t) => {
-  usersFunctions.checkUser('Wadia', (err, res) => {
+  usersFunctions.checkUser('wadia', (err, res) => {
     if (err) {
       t.notOk(err);
     } else {
@@ -20,7 +20,7 @@ test("Check the user's existing", (t) => {
 });
 
 test('get user ID', (t) => {
-  usersFunctions.getUserId('Wadia', (err, res) => {
+  usersFunctions.getUserId('wadia', (err, res) => {
     if (err) {
       t.notOk(err);
     } else {
