@@ -7,7 +7,7 @@
     "include": [
       "src/**/**/*.js"
     ],
-     "all": true
+    "all": true
   },
   "scripts": {
     "testt": "NODE_ENV=test node src/tests/users.test.js | tap-spec  && NODE_ENV=test node src/tests/skills.test.js | tap-spec && NODE_ENV=test node src/tests/accounts.test.js | tap-spec && NODE_ENV=test node src/tests/comments.test.js | tap-spec && NODE_ENV=test node src/tests/posts.test.js| tap-spec",
@@ -22,10 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/FACG2/Fac-Community.git"
   },
-  "author": "Abdallah <abdallah.halees@gmail.com>
-              Wadia <mahmoud.alwadia@gmail.com>
-              Ahmed <ahmed.ajourr@gmail.com>
-              AlMadhoun <mrm7moud@hotmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FACG2/Fac-Community/issues"
