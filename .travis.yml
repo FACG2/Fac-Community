@@ -5,7 +5,10 @@ install:
   - npm install -g pg
   - npm install -g codecov
   - npm install
-after_success: npm run coverage
+after_success:
+  - npm run coverage
+  - codecov
+  - npm run testt
 services:
   - postgresql
 env:
@@ -14,3 +17,6 @@ env:
 before_script:
   - psql -c 'create database community;' -U postgres
   - npm run build:db
+  - pip install --user codecov
+after_script:
+  - npm install coveralls && cat ./coverage/lcov.info | coveralls && codecov
