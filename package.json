@@ -9,7 +9,7 @@
     "start": "NODE_ENV=development node src/index.js",
     "watch": "NODE_ENV=test nodemon src/index.js",
     "build:db": "NODE_ENV=test node src/model/database/dbBuild.js",
-    "test": "NODE_ENV=test nyc node src/tests/*.test.js | tap-spec",
+    "test": "NODE_ENV=test tape src/tests/*.test.js | tap-spec",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
