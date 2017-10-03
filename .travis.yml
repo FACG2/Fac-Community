@@ -9,8 +9,8 @@ after_success: npm run coverage
 services:
   - postgresql
 env:
-  - NODE_ENV=test
+  # - NODE_ENV=test
   - TEST_DATABASE=postgres://postgres:postgres@localhost:5432/community
-# before_script:
-#   - psql -c 'create database community;' -U postgres
-#   - npm run build:db
+before_script:
+  - psql -c 'create database community;' -U postgres
+  - npm run build:db
